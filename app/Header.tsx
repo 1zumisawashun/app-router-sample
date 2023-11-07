@@ -37,7 +37,7 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex gap-12">
             {/* 3. リンク先は未実装のためトップページに遷移 */}
             <Link
-              href="/"
+              href="/notes"
               className="text-gray-600 hover:text-pink-500 active:text-pink-700 text-lg font-semibold transition duration-100"
             >
               Memo
