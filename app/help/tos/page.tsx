@@ -1,4 +1,4 @@
-import Nl2br from "@/components/Nl2br";
+import { Nl2br } from "@/components";
 import { prisma } from "@/globals/db";
 
 // 常に再生成

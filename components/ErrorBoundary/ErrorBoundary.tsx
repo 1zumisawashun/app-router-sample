@@ -3,7 +3,15 @@ import React, { ReactNode } from "react";
 
 type Props = { fallback: ReactNode; children: ReactNode };
 
-class ErrorBoundary extends React.Component<Props, { hasError: boolean }> {
+/**
+ * @description イベントハンドラ・非同期コード・SSRは下記ではキャッチできないのでreact-error-boundaryが必要になる
+ * @see https://ja.legacy.reactjs.org/docs/react-component.html#error-boundaries
+ * @see https://zenn.dev/azukiazusa/articles/60933e9cb1a4bc
+ */
+export class ErrorBoundary extends React.Component<
+  Props,
+  { hasError: boolean }
+> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -21,5 +29,3 @@ class ErrorBoundary extends React.Component<Props, { hasError: boolean }> {
     return <>{this.props.children}</>;
   }
 }
-
-export default ErrorBoundary;

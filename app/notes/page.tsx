@@ -1,6 +1,4 @@
-import ErrorBoundary from "@/components/ErrorBoundary";
-import FetchError from "@/components/FetchError";
-import Loading from "@/components/Loading";
+import { ErrorBoundary, FetchError, Loading } from "@/components";
 import { apiUrl } from "@/constants/api";
 import Link from "next/link";
 import { Suspense } from "react";

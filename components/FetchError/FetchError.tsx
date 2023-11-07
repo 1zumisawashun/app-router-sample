@@ -1,4 +1,4 @@
-const FetchError: React.FC = () => {
+export const FetchError: React.FC = () => {
   return (
     <div className="flex justify-center">
       <div
@@ -13,4 +13,3 @@ const FetchError: React.FC = () => {
     </div>
   );
 };
-export default FetchError;
