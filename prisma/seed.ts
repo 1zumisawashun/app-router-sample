@@ -10,7 +10,7 @@ async function main() {
   const metadatas: Prisma.MetadataCreateInput[] = [
     {
       key: "version",
-      value: "13.2.1",
+      value: "14.0.1",
     },
     {
       key: "faq",
