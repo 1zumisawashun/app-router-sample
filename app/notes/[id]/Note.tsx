@@ -28,11 +28,10 @@ const Note: React.FC<Props> = ({ item }) => {
 
   return (
     <div className="flex flex-col bg-gray-100 rounded-lg relative p-5 gap-2.5">
-      <Link href={`/notes/${item.id}`} prefetch={false}>
-        <h3 className="text-pink-500 text-lg md:text-xl font-semibold break-all">
-          {item.title}
-        </h3>
-      </Link>
+      <h3 className="text-pink-500 text-lg md:text-xl font-semibold break-all">
+        {item.title}
+      </h3>
+
       <p className="text-gray-500 break-all">{item.body}</p>
 
       <div className="flex flex-col sm:flex-row sm:justify-end gap-2.5">

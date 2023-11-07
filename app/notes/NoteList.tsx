@@ -36,7 +36,6 @@ type NoteProps = {
 const NoteItem: React.FC<NoteProps> = ({ item }) => {
   return (
     <div className="bg-gray-100 rounded-lg relative p-5 pt-8">
-      {/* ノート編集ページは未実装のため一覧ページに遷移 */}
       <Link href={`/notes/${item.id}/edit`} className="absolute -top-4 left-4">
         <span className="w-8 h-8 inline-flex justify-center items-center bg-pink-500 hover:bg-pink-700 text-white rounded-full">
           <svg
@@ -49,8 +48,8 @@ const NoteItem: React.FC<NoteProps> = ({ item }) => {
           </svg>
         </span>
       </Link>
-      {/* ノート詳細ページは未実装のため一覧ページに遷移 */}
-      <Link href={`/notes`} prefetch={false}>
+
+      <Link href={`/notes/${item.id}`} prefetch={false}>
         <h3 className="text-pink-500 hover:text-pink-700 text-lg md:text-xl font-semibold mb-3 break-all underline underline-offset-2">
           {item.title}
         </h3>
