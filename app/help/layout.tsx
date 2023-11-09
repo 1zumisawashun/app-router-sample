@@ -1,33 +1,29 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import styles from "./styles.module.css";
 
-// `/help/faq`と`/help/tos`で共通するレイアウト
-// https://beta.nextjs.org/docs/routing/pages-and-layouts#nesting-layouts
+/**
+ * @description `/help/faq`と`/help/tos`で共通するレイアウト
+ * @see https://beta.nextjs.org/docs/routing/pages-and-layouts#nesting-layouts
+ */
 export default function Layout({ children }: { children: React.ReactNode }) {
   // パスを取得してUIを変更する
   const pathname = usePathname();
   return (
-    <section className="mx-2 sm:mx-4">
-      {/* Include shared UI here e.g. a header or sidebar */}
-      <nav className="flex gap-12 mb-4">
+    <section className={styles["nav-wrapper"]}>
+      <nav className={styles["nav"]}>
         <Link
           href="/help/faq"
-          className={`${
-            pathname === "/help/faq"
-              ? "text-pink-500 font-semibold"
-              : "text-gray-600 font-normal"
-          } hover:text-pink-500 active:text-pink-700 text-lg transition duration-100`}
+          aria-selected={pathname === "/help/faq"}
+          className={styles["nav-item"]}
         >
           FAQ
         </Link>
         <Link
           href="/help/tos"
-          className={`${
-            pathname === "/help/tos"
-              ? "text-pink-500 font-semibold"
-              : "text-gray-600 font-normal"
-          } hover:text-pink-500 active:text-pink-700 text-lg transition duration-100`}
+          aria-selected={pathname === "/help/tos"}
+          className={styles["nav-item"]}
         >
           Terms
         </Link>

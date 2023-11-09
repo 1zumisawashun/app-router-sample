@@ -1,0 +1,41 @@
+.nav-wrapper {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .nav-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 1rem;
+}
+
+.nav-item {
+  font-size: 1.125rem;
+  transition-property: color;
+  transition-duration: 0.1s;
+}
+
+.nav-item[aria-selected="true"] {
+  color: #ec4899;
+  font-weight: 600;
+}
+
+.nav-item[aria-selected="false"] {
+  color: #718096;
+  font-weight: normal;
+}
+
+.nav-item:hover {
+  color: #d94663;
+}
+
+.nav-item:active {
+  color: #d94663;
+}
