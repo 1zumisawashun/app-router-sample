@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import coverPic from "../public/cover.jpg";
+import coverPic from "../../public/cover.jpg";
 
 export default function Page() {
   return (

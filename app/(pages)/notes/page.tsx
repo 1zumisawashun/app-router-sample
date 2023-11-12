@@ -1,5 +1,5 @@
-import { ErrorBoundary, FetchError, Loading } from "@/components";
-import { apiUrl } from "@/constants/api";
+import { ErrorBoundary, FetchError, Loading } from "@/app/components";
+import { apiUrl } from "@/app/functions/constants/api";
 import Link from "next/link";
 import { Suspense } from "react";
 import "server-only";

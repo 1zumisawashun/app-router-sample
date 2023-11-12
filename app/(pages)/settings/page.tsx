@@ -1,4 +1,4 @@
-import { prisma } from "@/globals/db";
+import { prisma } from "@/app/functions/globals/db";
 import "server-only";
 import { zSettings } from "../type";
 import EditSettings from "./EditSettings";

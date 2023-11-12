@@ -1,5 +1,5 @@
-import { zUpsertNote } from "@/app/notes/type";
-import { prisma } from "@/globals/db";
+import { zUpsertNote } from "@/app/(pages)/notes/type";
+import { prisma } from "@/app/functions/globals/db";
 import { NextRequest, NextResponse } from "next/server";
 
 // /api/notes/[id]/route.ts

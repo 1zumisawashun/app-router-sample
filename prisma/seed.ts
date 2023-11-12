@@ -1,5 +1,5 @@
-import { metadatas } from "@/constants/metedatas";
-import { notes } from "@/constants/notes";
+import { metadatas } from "@/app/functions/constants/metedatas";
+import { notes } from "@/app/functions/constants/notes";
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();

@@ -1,5 +1,5 @@
-import { zSettings } from "@/app/type";
-import { prisma } from "@/globals/db";
+import { zSettings } from "@/app/(pages)/type";
+import { prisma } from "@/app/functions/globals/db";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function PUT(req: NextRequest) {
@@ -20,5 +20,5 @@ export async function PUT(req: NextRequest) {
       data: { value: parcedData.tos },
     }),
   ]);
-  return new NextResponse(null, { status: 204 })
+  return new NextResponse(null, { status: 204 });
 }

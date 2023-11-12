@@ -1,4 +1,4 @@
-import { ErrorBoundary, FetchError, Loading } from "@/components";
+import { ErrorBoundary, FetchError, Loading } from "@/app/components";
 import { Suspense } from "react";
 import FaqIndex from "./FaqIndex";
 

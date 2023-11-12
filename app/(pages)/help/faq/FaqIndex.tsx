@@ -1,5 +1,5 @@
-import { Nl2br } from "@/components";
-import { prisma } from "@/globals/db";
+import { Nl2br } from "@/app/components";
+import { prisma } from "@/app/functions/globals/db";
 import styles from "./styles.module.css";
 
 // 30秒ごとに再生成
