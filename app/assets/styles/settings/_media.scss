@@ -1,0 +1,55 @@
+/* Setting Layer */
+
+$iphone5: 320px;
+$sp: 576px;
+$tab: 768px;
+$pc: 1042px;
+
+@mixin iphone5 {
+  @media (max-width: ($iphone5)) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+
+@mixin hoverAnime {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin lineClamp($line-clamp-number: 3) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp-number; /* 表示する最大行数を設定 */
+  -webkit-box-orient: vertical;
+}
+
+@mixin boxShadow() {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}

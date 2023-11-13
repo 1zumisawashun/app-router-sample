@@ -1,5 +1,5 @@
 import { zVersion } from "@/app/features/settings/settings.type";
-import { prisma } from "@/app/functions/globals/db";
+import { prisma } from "@/app/functions/libs/prisma";
 import Link from "next/link";
 import { Suspense } from "react";
 import "server-only";

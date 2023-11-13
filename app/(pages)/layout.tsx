@@ -1,4 +1,5 @@
-import "@/app/assets/css/globals.css";
+import "@/app/assets/styles/app.scss";
+import "@/app/assets/styles/globals.css";
 import { Header } from "@/app/components/layouts/Header";
 import { Noto_Sans_JP } from "next/font/google";
 
