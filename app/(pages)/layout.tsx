@@ -1,6 +1,6 @@
+import "@/app/assets/css/globals.css";
+import { Header } from "@/app/components/layouts/Header";
 import { Noto_Sans_JP } from "next/font/google";
-import Header from "./Header";
-import "./globals.css";
 
 const NotoSansJP = Noto_Sans_JP({
   weight: ["400", "700"],

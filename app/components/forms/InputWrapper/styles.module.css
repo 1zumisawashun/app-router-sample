@@ -1,0 +1,20 @@
+.input-wrapper {
+  display: grid;
+  gap: 3px;
+}
+.input-wrapper-label[aria-disabled='true'] {
+  pointer-events: none;
+}
+.input-wrapper-label {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+}
+.input-wrapper-description {
+  font-size: 1.4rem;
+  color: $basalt-grey;
+}
+.input-wrapper-error {
+  font-size: 1.4rem;
+  color: $spicy-berry;
+}

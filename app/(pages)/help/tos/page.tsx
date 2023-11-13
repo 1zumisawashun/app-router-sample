@@ -1,12 +1,12 @@
 import { ErrorBoundary, FetchError, Loading } from "@/app/components";
+import Tos from "@/app/features/tos";
 import { Suspense } from "react";
-import TosIndex from "./TosIndex";
 
 export default async function Page() {
   return (
     <ErrorBoundary fallback={<FetchError />}>
       <Suspense fallback={<Loading />}>
-        <TosIndex />
+        <Tos />
       </Suspense>
     </ErrorBoundary>
   );

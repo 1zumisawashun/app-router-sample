@@ -1,10 +1,10 @@
+import { zVersion } from "@/app/features/settings/settings.type";
+import { prisma } from "@/app/functions/globals/db";
 import Link from "next/link";
 import { Suspense } from "react";
 import "server-only";
-import { prisma } from "../functions/globals/db";
-import { zVersion } from "./type";
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const title = "Awesome Note App";
   return (
     <div className="bg-white lg:pb-6">
@@ -81,5 +81,3 @@ const Version = async () => {
   const version = zVersion.parse(metadata.value);
   return `v${version}`;
 };
-
-export default Header;
