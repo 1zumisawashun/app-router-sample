@@ -1,8 +1,10 @@
+@import "@/app/assets/styles/app.scss";
+
 .input-wrapper {
   display: grid;
   gap: 3px;
 }
-.input-wrapper-label[aria-disabled='true'] {
+.input-wrapper-label[aria-disabled="true"] {
   pointer-events: none;
 }
 .input-wrapper-label {

@@ -1,5 +1,5 @@
 import { ComponentPropsWithRef, forwardRef, useId } from "react";
-import styles from "../InputText/styles.module.css";
+import styles from "../InputText/styles.module.scss";
 import {
   InputWrapper,
   InputWrapperPropsPassThroughProps,

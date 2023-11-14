@@ -1,6 +1,6 @@
 import { prisma } from "@/app/functions/libs/prisma";
 import "server-only";
-import EditSettings from "./components/EditSettings";
+import { EditSettings } from "./components/EditSettings";
 import { zSettings } from "./settings.type";
 
 export const revalidate = 0;
@@ -13,9 +13,11 @@ export default async function Page() {
   // ページ内でのDBからのデータ取得
   const settings = await getSettings();
   return (
-    <main className="mx-2 sm:mx-4">
-      <h2 className="my-4 text-gray-400 text-xs">Settings</h2>
-      <EditSettings value={settings} />
+    <main>
+      <div className="container-sp _mb-2">
+        <h2 className="text-small -grey _my-1">Settings</h2>
+        <EditSettings value={settings} />
+      </div>
     </main>
   );
 }

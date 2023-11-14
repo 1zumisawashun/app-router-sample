@@ -1,0 +1,16 @@
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+
+  &.-column {
+    flex-direction: column;
+  }
+  &.-left {
+    justify-content: flex-start;
+  }
+  &.-right {
+    justify-content: flex-end;
+  }
+}

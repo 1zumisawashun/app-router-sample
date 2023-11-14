@@ -1,0 +1,54 @@
+@mixin base-text {
+  color: #222222;
+  font-size: 1rem;
+  white-space: pre-line;
+  // word-break: break-all;
+  // position
+  &.-left {
+    text-align: left;
+  }
+  &.-right {
+    text-align: right;
+  }
+  &.-center {
+    text-align: center;
+  }
+
+  // weight
+  &.-bold {
+    font-weight: bold;
+  }
+  // color
+  &.-success {
+    color: $devils-grass;
+  }
+  &.-danger {
+    color: $amour;
+  }
+  &.-grey {
+    color: #718096;
+  }
+  &.-pink {
+    color: #ec4899;
+  }
+}
+
+.text-x-small {
+  @include base-text;
+  font-size: 0.75rem;
+}
+.text-small {
+  @include base-text;
+  font-size: 0.85rem;
+}
+.text-normal {
+  @include base-text;
+}
+.text-medium {
+  @include base-text;
+  font-size: 1.15rem;
+}
+.text-large {
+  @include base-text;
+  font-size: 1.25rem;
+}

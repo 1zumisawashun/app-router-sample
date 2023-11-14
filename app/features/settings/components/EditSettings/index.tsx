@@ -1,15 +1,22 @@
 "use client";
-import { InputText, InputTextarea } from "@/app/components";
+import {
+  Button,
+  ButtonWrapper,
+  InputText,
+  InputTextarea,
+} from "@/app/components";
+import { Settings } from "@/app/features/settings/settings.type";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { Settings } from "../settings.type";
+import styles from "./styles.module.scss";
 
 type Props = {
   value: Settings;
 };
 
-const EditSettings: React.FC<Props> = ({ value }) => {
+export const EditSettings: React.FC<Props> = ({ value }) => {
   const router = useRouter();
+
   const [version, setVersion] = useState(value.version);
   const [faq, setFaq] = useState(value.faq);
   const [tos, setTos] = useState(value.tos);
@@ -31,7 +38,7 @@ const EditSettings: React.FC<Props> = ({ value }) => {
   }, [faq, router, tos, version]);
 
   return (
-    <div className="flex flex-col bg-gray-100 rounded-lg relative p-5 gap-2.5">
+    <div className={styles["edit-settings-container"]}>
       <InputText
         label="Version"
         value={version}
@@ -47,16 +54,11 @@ const EditSettings: React.FC<Props> = ({ value }) => {
         value={tos}
         onChange={(e) => setTos(e.target.value)}
       ></InputTextarea>
-      <div className="flex flex-col sm:flex-row sm:justify-end gap-2.5">
-        <button
-          onClick={updateSettings}
-          className="inline-block bg-pink-500 hover:bg-pink-600 active:bg-pink-700 focus-visible:ring ring-pink-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-2"
-        >
+      <ButtonWrapper>
+        <Button onClick={updateSettings} size="large">
           Save
-        </button>
-      </div>
+        </Button>
+      </ButtonWrapper>
     </div>
   );
 };
-
-export default EditSettings;

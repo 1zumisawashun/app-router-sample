@@ -3,7 +3,7 @@ import {
   InputWrapper,
   InputWrapperPropsPassThroughProps,
 } from "../InputWrapper";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 export type InputProps = ComponentPropsWithRef<"textarea">;
 export type InputFieldProps = InputProps & InputWrapperPropsPassThroughProps;

@@ -1,13 +1,15 @@
+@import "@/app/assets/styles/app.scss";
+
 .input-label {
-  display: inline-block; 
-  color: #2d3748; 
-  font-size: 0.875rem; 
-  margin-bottom: 0.5rem; 
+  display: inline-block;
+  color: #2d3748;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 640px) {
   .input-label {
-    font-size: 1rem; 
+    font-size: 1rem;
   }
 }
 

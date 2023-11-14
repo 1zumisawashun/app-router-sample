@@ -1,6 +1,6 @@
 import { FC, ReactNode } from "react";
 import { InputLabel } from "../InputLabel";
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 type InputWrapperProps = {
   id: string;

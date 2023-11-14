@@ -1,0 +1,16 @@
+@mixin lineClamp($line-clamp-number: 3) {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-clamp-number; /* 表示する最大行数を設定 */
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-1 {
+  @include lineClamp(1);
+}
+.line-clamp-2 {
+  @include lineClamp(2);
+}
+.line-clamp-3 {
+  @include lineClamp(3);
+}

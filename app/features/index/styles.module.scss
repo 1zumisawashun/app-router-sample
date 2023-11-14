@@ -1,0 +1,33 @@
+@import "@/app/assets/styles/app.scss";
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.index-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.index-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  gap: 1rem;
+}
+
+.index-image-wrapper {
+  @include boxShadow;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.index-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

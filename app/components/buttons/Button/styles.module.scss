@@ -1,4 +1,4 @@
-@import "@/app/assets/styles/css-modules.scss";
+@import "@/app/assets/styles/app.scss";
 
 $small: 12px;
 $medium: 14px;
@@ -17,7 +17,7 @@ $large-pd-x: 24px;
   border-radius: 0.5em;
   box-sizing: border-box;
   line-height: 1;
-  min-width: 150px;
+  min-width: 100px;
   align-items: center;
   cursor: pointer;
   display: inline-flex;
@@ -76,13 +76,13 @@ $large-pd-x: 24px;
 // button-variant-color
 .module[data-variant="contained"][data-theme="primary"] {
   color: white;
-  background-color: $vintage-blue;
-  border: 1px solid $vintage-blue;
+  background-color: $pop-that-gum;
+  border: 1px solid $pop-that-gum;
 }
 .module[data-variant="outlined"][data-theme="primary"] {
-  color: $vintage-blue;
+  color: $pop-that-gum;
   background-color: white;
-  border: 1px solid $vintage-blue;
+  border: 1px solid $pop-that-gum;
 }
 .module[data-variant="contained"][data-theme="danger"] {
   color: white;

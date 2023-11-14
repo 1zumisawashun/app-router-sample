@@ -1,14 +1,4 @@
-.nav-wrapper {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-@media (min-width: 640px) {
-  .nav-wrapper {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
+@import "@/app/assets/styles/app.scss";
 
 .nav {
   display: flex;
@@ -20,6 +10,10 @@
   font-size: 1.125rem;
   transition-property: color;
   transition-duration: 0.1s;
+  @include hoverAnime {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
 }
 
 .nav-item[aria-selected="true"] {
@@ -30,12 +24,4 @@
 .nav-item[aria-selected="false"] {
   color: #718096;
   font-weight: normal;
-}
-
-.nav-item:hover {
-  color: #d94663;
-}
-
-.nav-item:active {
-  color: #d94663;
 }

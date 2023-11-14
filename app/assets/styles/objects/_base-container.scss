@@ -1,0 +1,15 @@
+/* Object Layer */
+
+@mixin base-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.container-pc {
+  @include base-container;
+}
+.container-sp {
+  @include base-container;
+  width: 576px;
+  margin: auto;
+}

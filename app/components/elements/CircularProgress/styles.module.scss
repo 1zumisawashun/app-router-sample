@@ -1,4 +1,4 @@
-@import "@/app/assets/styles/css-modules.scss";
+@import "@/app/assets/styles/app.scss";
 
 $small: 12px;
 $medium: 14px;
@@ -36,7 +36,7 @@ $large: 16px;
   border-top: 5px solid transparent;
 }
 .module[data-variant="outlined"][data-theme="primary"] {
-  border: 2px solid $vintage-blue;
+  border: 2px solid $pop-that-gum;
   border-top: 5px solid transparent;
 }
 .module[data-variant="contained"][data-theme="danger"] {

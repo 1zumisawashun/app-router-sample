@@ -1,34 +1,38 @@
+import { CircularProgress } from "@/app/components";
 import { SizeType, ThemeType, VariantType } from "@/app/functions/types/Common";
 import clsx from "clsx";
-import {
-  UnstyledButtonAnchor,
-  UnstyledButtonAnchorProps,
-} from "./UnstyledButton";
+import { UnstyledButton, UnstyledButtonProps } from "../UnstyledButton";
 import styles from "./styles.module.scss";
 
-type Props = {
+type ButtonProps = {
   size?: SizeType;
   variant?: VariantType;
   theme?: ThemeType;
-} & UnstyledButtonAnchorProps;
+  loading?: boolean;
+} & UnstyledButtonProps;
 
-export const AnchorButton = ({
+export const Button = ({
+  type,
   children,
   theme = "primary",
   variant = "contained",
   size = "medium",
+  loading,
+  disabled,
   className,
   ...props
-}: Props) => {
+}: ButtonProps) => {
   return (
-    <UnstyledButtonAnchor
+    <UnstyledButton
       {...props}
+      type="button"
       className={clsx(className, styles.module)}
       data-variant={variant}
       data-theme={theme}
       data-size={size}
+      aria-disabled={disabled}
     >
-      {children}
-    </UnstyledButtonAnchor>
+      {loading ? <CircularProgress {...{ size, theme, variant }} /> : children}
+    </UnstyledButton>
   );
 };

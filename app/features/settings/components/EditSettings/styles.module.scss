@@ -1,12 +1,9 @@
-.edit-settings-wrapper {
+.edit-settings-container {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   background-color: #f0f0f0;
   border-radius: 0.5rem;
   position: relative;
   padding: 1.25rem;
-}
-
-.edit-settings-wrapper > * {
-  margin-top: 0.625rem;
 }

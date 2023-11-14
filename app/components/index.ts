@@ -1,6 +1,7 @@
 /* buttons */
 export { AnchorButton } from "./buttons/AnchorButton";
 export { Button } from "./buttons/Button";
+export { ButtonWrapper } from "./buttons/ButtonWrapper";
 export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
 
 /* elements */
