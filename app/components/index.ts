@@ -8,8 +8,10 @@ export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
 export { CircularProgress } from "./elements/CircularProgress";
 export { ErrorBoundary } from "./elements/ErrorBoundary";
 export { FetchError } from "./elements/FetchError";
+export { Image } from "./elements/Image";
 export { Loading } from "./elements/Loading";
 export { Nl2br } from "./elements/Nl2br";
+export { NextJsIcon ,AddIcon} from "./elements/SvgIcon";
 
 /* forms */
 export { InputLabel } from "./forms/InputLabel";

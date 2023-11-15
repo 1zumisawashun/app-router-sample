@@ -1,5 +1,5 @@
-import { CircularProgress } from "@/app/components";
-import { SizeType, ThemeType, VariantType } from "@/app/functions/types/Common";
+import { CircularProgress } from "@/components";
+import { SizeType, ThemeType, VariantType } from "@/functions/types/Common";
 import clsx from "clsx";
 import { UnstyledButton, UnstyledButtonProps } from "../UnstyledButton";
 import styles from "./styles.module.scss";
@@ -26,7 +26,7 @@ export const Button = ({
     <UnstyledButton
       {...props}
       type="button"
-      className={clsx(className, styles.module)}
+      className={clsx(className, styles["module"])}
       data-variant={variant}
       data-theme={theme}
       data-size={size}

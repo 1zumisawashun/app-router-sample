@@ -1,8 +1,8 @@
 // 1. フックを用いているためClient Componentsとして定義
 "use client";
+import { Note, zNotes } from "@/functions/models/Notes";
 import Link from "next/link";
 import useSWR from "swr";
-import { Note, zNotes } from "./type";
 
 type Props = {
   initialState: Note[];

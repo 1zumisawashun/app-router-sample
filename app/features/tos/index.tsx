@@ -1,5 +1,5 @@
-import { Nl2br } from "@/app/components";
-import { prisma } from "@/app/functions/libs/prisma";
+import { Nl2br } from "@/components";
+import { prisma } from "@/functions/libs/prisma";
 
 // 常に再生成
 export const revalidate = 0;

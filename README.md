@@ -7,11 +7,25 @@ app-router-sample のリポジトリです。
 Next.js App Router を案件で導入する前にある程度慣れた上で使用可否を判断したいので作成しました。
 
 - React Sever Component のログ  
-  　[【key-front】React Server Component（RSC）をまとめる](https://zenn.dev/shuuuuuun/scraps/7b2aaf746aec91)
+  [【key-front】React Server Component（RSC）をまとめる](https://zenn.dev/shuuuuuun/scraps/7b2aaf746aec91)
 - Next.js App Router のログ  
-  　[【key-front】Next.js App Router の素振り（ディレクトリ構成・CSS 選定・Composition パターン）](https://zenn.dev/shuuuuuun/scraps/9cd8d4c0a7be87)
+  [【key-front】Next.js App Router の素振り（ディレクトリ構成・CSS 選定・Composition パターン）](https://zenn.dev/shuuuuuun/scraps/9cd8d4c0a7be87)
+
+ITCSS を CSS 設計の骨子として CSS Modules との共存を模索しました。
+
 - CSS Modules を採用した背景  
-  　[【key-front】React における CSS のベストプラクティスについて議論してみた](https://zenn.dev/shuuuuuun/scraps/744aa994686183)
+  [【key-front】React における CSS のベストプラクティスについて議論してみた](https://zenn.dev/shuuuuuun/scraps/744aa994686183)
+
+tsconfig/bases を案件で導入する前にある程度慣れた上で使用可否を判断したいので導入しました。
+
+- tsconfig/bases のログ  
+  [【key-front】tsconfig/bases のすゝめ](https://zenn.dev/shuuuuuun/scraps/48ac73aeb3076c)
+
+- zod の導入  
+  今まで yup を使っていたので yup と zod の差分を図るため
+
+- envalid の導入  
+  env ファイルの健全化を検証するため
 
 ## 環境
 

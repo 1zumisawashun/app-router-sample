@@ -1,4 +1,4 @@
-import { SizeType, ThemeType, VariantType } from "@/app/functions/types/Common";
+import { SizeType, ThemeType, VariantType } from "@/functions/types/Common";
 import clsx from "clsx";
 import styles from "../Button/styles.module.scss";
 import {
@@ -23,7 +23,7 @@ export const AnchorButton = ({
   return (
     <UnstyledButtonAnchor
       {...props}
-      className={clsx(className, styles.module)}
+      className={clsx(className, styles["module"])}
       data-variant={variant}
       data-theme={theme}
       data-size={size}

@@ -1,5 +1,5 @@
-import { AnchorButton, ButtonWrapper } from "@/app/components";
-import coverPic from "@/public/cover.jpg";
+import coverPic from "@/assets/images/image-cover.jpg";
+import { AnchorButton, ButtonWrapper } from "@/components";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 

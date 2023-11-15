@@ -1,5 +1,5 @@
-import { zUpsertNote } from "@/app/(pages)/notes/type";
-import { prisma } from "@/app/functions/libs/prisma";
+import { prisma } from "@/functions/libs/prisma";
+import { zUpsertNote } from "@/functions/models/Notes";
 import { NextRequest, NextResponse } from "next/server";
 
 // 1. 動的レンダリングを強制する

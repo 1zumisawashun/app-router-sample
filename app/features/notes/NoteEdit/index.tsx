@@ -1,14 +1,14 @@
 "use client";
+import { Note } from "@/functions/models/Notes";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import { Note } from "../../type";
 
 type Props = {
   item: Note;
 };
 
-const EditNote: React.FC<Props> = ({ item }) => {
+export const NoteEdit: React.FC<Props> = ({ item }) => {
   const router = useRouter();
   const [title, setTitle] = useState(item.title);
   const [body, setBody] = useState(item.body);
@@ -30,6 +30,7 @@ const EditNote: React.FC<Props> = ({ item }) => {
   }, [body, item.id, router, title]);
 
   return (
+    
     <div className="flex flex-col bg-gray-100 rounded-lg relative p-5 gap-2.5">
       <div className="sm:col-span-2">
         <label
@@ -78,5 +79,3 @@ const EditNote: React.FC<Props> = ({ item }) => {
     </div>
   );
 };
-
-export default EditNote;

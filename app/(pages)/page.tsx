@@ -1,4 +1,4 @@
-import Index from "@/app/features/index";
+import Index from "@/features/index";
 
 // NOTE:use client宣言しなくてもいいの？
 export default function Page() {

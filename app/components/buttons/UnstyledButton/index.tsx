@@ -1,17 +1,17 @@
-import Link, { LinkProps } from 'next/link'
-import { ReactNode, ComponentPropsWithoutRef } from 'react'
+import Link, { LinkProps } from "next/link";
+import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 export type UnstyledButtonProps = {
-  type?: 'button' | 'submit' | 'reset'
-  children: ReactNode
-} & ComponentPropsWithoutRef<'button'>
+  type?: "button" | "submit" | "reset";
+  children: ReactNode;
+} & ComponentPropsWithoutRef<"button">;
 export type UnstyledButtonAnchorProps = {
-  children: ReactNode
-  className?: string
-} & LinkProps
+  children: ReactNode;
+  className?: string;
+} & LinkProps;
 
 export const UnstyledButton = ({
-  type = 'button',
+  type = "button",
   children,
   ...props
 }: UnstyledButtonProps) => {
@@ -19,12 +19,12 @@ export const UnstyledButton = ({
     <button {...props} type="button">
       {children}
     </button>
-  )
-}
+  );
+};
 
 export const UnstyledButtonAnchor = ({
   children,
   ...props
 }: UnstyledButtonAnchorProps) => {
-  return <Link {...props}>{children}</Link>
-}
+  return <Link {...props}>{children}</Link>;
+};

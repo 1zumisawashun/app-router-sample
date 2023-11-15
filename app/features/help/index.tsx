@@ -1,5 +1,5 @@
 "use client";
-import { UnstyledButtonAnchor } from "@/app/components";
+import { UnstyledButtonAnchor } from "@/components";
 import { usePathname } from "next/navigation";
 import styles from "./styles.module.scss";
 

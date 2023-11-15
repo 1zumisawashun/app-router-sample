@@ -1,4 +1,4 @@
-import { SizeType, ThemeType, VariantType } from "@/app/functions/types/Common";
+import { SizeType, ThemeType, VariantType } from "@/functions/types/Common";
 import clsx from "clsx";
 import styles from "./styles.module.scss";
 
@@ -16,7 +16,7 @@ export const CircularProgress = ({
 }: CircularProgressProps) => {
   return (
     <span
-      className={clsx(className, styles.module)}
+      className={clsx(className, styles["module"])}
       data-variant={variant}
       data-theme={theme}
       data-size={size}

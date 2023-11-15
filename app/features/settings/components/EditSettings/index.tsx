@@ -1,11 +1,6 @@
 "use client";
-import {
-  Button,
-  ButtonWrapper,
-  InputText,
-  InputTextarea,
-} from "@/app/components";
-import { Settings } from "@/app/features/settings/settings.type";
+import { Button, ButtonWrapper, InputText, InputTextarea } from "@/components";
+import { Settings } from "@/functions/models/Settings";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import styles from "./styles.module.scss";

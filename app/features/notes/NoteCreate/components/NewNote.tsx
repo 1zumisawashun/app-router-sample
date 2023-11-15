@@ -20,7 +20,7 @@ const NewNote: React.FC = () => {
     });
     if (res.ok) {
       const id = z.number().parse(await res.json());
-      alert("Note created");
+      alert(`${id} Note created`);
       // 詳細ページが実装されたら、詳細ページに遷移するようにする
       router.push(`/notes`);
       // 3. 現在のページのデータをサーバーから再取得する

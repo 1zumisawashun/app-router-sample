@@ -1,5 +1,5 @@
-import { ErrorBoundary, FetchError, Loading } from "@/app/components";
-import Tos from "@/app/features/tos";
+import { ErrorBoundary, FetchError, Loading } from "@/components";
+import Tos from "@/features/tos";
 import { Suspense } from "react";
 
 export default async function Page() {

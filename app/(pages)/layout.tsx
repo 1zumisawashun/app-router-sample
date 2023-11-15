@@ -1,6 +1,6 @@
-import "@/app/assets/styles/app.scss";
-import "@/app/assets/styles/globals.css";
-import { Header } from "@/app/components/layouts/Header";
+import "@/assets/styles/app.scss";
+import "@/assets/styles/globals.css";
+import { Header } from "@/components/layouts/Header";
 import { Noto_Sans_JP } from "next/font/google";
 
 const NotoSansJP = Noto_Sans_JP({

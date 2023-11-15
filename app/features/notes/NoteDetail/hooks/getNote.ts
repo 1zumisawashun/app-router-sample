@@ -1,6 +1,6 @@
-import { apiUrl } from "@/app/functions/constants/api";
+import { apiUrl } from "@/functions/constants/api";
+import { zNote } from "@/functions/models/Notes";
 import "server-only";
-import { zNote } from "../type";
 
 export const getNote = async (id: string) => {
   const res = await fetch(`${apiUrl}/notes/${id}`, { cache: "no-store" });

@@ -1,5 +1,5 @@
-import { ErrorBoundary, FetchError, Loading } from "@/app/components";
-import Faq from "@/app/features/faq";
+import { ErrorBoundary, FetchError, Loading } from "@/components";
+import Faq from "@/features/faq";
 import { Suspense } from "react";
 
 export default async function Page() {

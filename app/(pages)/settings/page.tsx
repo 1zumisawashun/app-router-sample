@@ -1,4 +1,4 @@
-import Settings from "@/app/features/settings";
+import Settings from "@/features/settings";
 
 export default async function Page() {
   return <Settings></Settings>;

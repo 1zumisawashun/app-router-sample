@@ -21,7 +21,7 @@ export const InputWrapper: FC<InputWrapperProps> = ({
   id,
   label,
   error,
-  className,
+  // className,
   description,
   children,
   isOptioned = false,

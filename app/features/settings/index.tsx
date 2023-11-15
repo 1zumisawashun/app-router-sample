@@ -1,7 +1,7 @@
-import { prisma } from "@/app/functions/libs/prisma";
+import { prisma } from "@/functions/libs/prisma";
+import { zSettings } from "@/functions/models/Settings";
 import "server-only";
 import { EditSettings } from "./components/EditSettings";
-import { zSettings } from "./settings.type";
 
 export const revalidate = 0;
 

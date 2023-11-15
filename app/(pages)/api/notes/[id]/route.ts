@@ -1,5 +1,5 @@
-import { zUpsertNote } from "@/app/(pages)/notes/type";
-import { prisma } from "@/app/functions/libs/prisma";
+import { prisma } from "@/functions/libs/prisma";
+import { zUpsertNote } from "@/functions/models/Notes";
 import { NextRequest, NextResponse } from "next/server";
 
 // /api/notes/[id]/route.ts
@@ -34,6 +34,7 @@ export async function PUT(
       updatedAt: new Date(),
     },
   });
+  console.log(note);
   return new NextResponse(null, { status: 204 });
 }
 
@@ -45,5 +46,6 @@ export async function DELETE(
   const note = await prisma.note.delete({
     where: { id: Number(params.id) },
   });
+  console.log(req, note);
   return new NextResponse(null, { status: 204 });
 }
