@@ -4,13 +4,13 @@
   justify-content: center;
   gap: 1rem;
 
-  &.-column {
-    flex-direction: column;
-  }
-  &.-left {
+  &.-start {
     justify-content: flex-start;
   }
-  &.-right {
+  &.-end {
     justify-content: flex-end;
+  }
+  &.-column {
+    flex-direction: column;
   }
 }

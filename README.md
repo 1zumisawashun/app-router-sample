@@ -21,20 +21,26 @@ tsconfig/bases を案件で導入する前にある程度慣れた上で使用�
 - tsconfig/bases のログ  
   [【key-front】tsconfig/bases のすゝめ](https://zenn.dev/shuuuuuun/scraps/48ac73aeb3076c)
 
+その他
+
 - zod の導入  
-  今まで yup を使っていたので yup と zod の差分を図るため
+  今まで yup を使っていたので zod を使用してみて差分を見るため
 
 - envalid の導入  
   env ファイルの健全化を検証するため
 
+- [happy-css-modules](https://www.mizdra.net/entry/2022/11/14/102506) の導入  
+  堅牢な CSS Modules を構築するため
+
 ## 環境
 
 ```
-frontend：Next.js App Router, TypeScript
-css：CSS Modules, ITCSS
-backend：Next.js API Routes
-orm：Prisma
-db：SQLite
+frontend: Next.js App Router, TypeScript
+css: CSS Modules, Sass
+backend: Next.js API Routes
+orm: Prisma
+db: SQLite
+library: zod, envalid, happy-css-modules, SWR
 ```
 
 ## Installation
@@ -76,6 +82,4 @@ $ npm run lint
 
 ## その他ドキュメント
 
-See [Configuration Reference](https://github.com/vercel/next.js/tree/canary/examples/with-stripe-typescript).
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- なし

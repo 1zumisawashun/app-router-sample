@@ -1,0 +1,47 @@
+.note-item-wrapper {
+  position: relative;
+  padding: 1.25rem;
+  padding-top: 2rem;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6;
+}
+
+.styled-button-anchor {
+  position: absolute;
+  left: 1rem;
+  top: -1rem;
+  :hover {
+    background-color: #be185d;
+  }
+}
+
+.icon-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+  color: #ffffff;
+  background-color: #ec4899;
+}
+
+.link-item {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #ec4899;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-all;
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  :hover {
+    color: #be185d;
+  }
+}

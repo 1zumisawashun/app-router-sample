@@ -22,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={NotoSansJP.className}>
-        <Header></Header>
-        {children}
+        <Header />
+        <main>
+          <div className="container-sp _mb-2">{children}</div>
+        </main>
       </body>
     </html>
   );

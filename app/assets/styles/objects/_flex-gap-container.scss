@@ -3,8 +3,4 @@
 .flex-gap-container {
   display: flex;
   gap: 30px;
-  &.-center {
-    text-align: center;
-    justify-content: center;
-  }
 }

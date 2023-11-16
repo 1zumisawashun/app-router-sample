@@ -1,9 +1,14 @@
 "use client";
-import { Button, ButtonWrapper, InputText, InputTextarea } from "@/components";
+import {
+  Button,
+  ButtonWrapper,
+  FormWrapper,
+  InputText,
+  InputTextarea,
+} from "@/components";
 import { Settings } from "@/functions/models/Settings";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
-import styles from "./styles.module.scss";
 
 type Props = {
   value: Settings;
@@ -33,7 +38,7 @@ export const EditSettings: React.FC<Props> = ({ value }) => {
   }, [faq, router, tos, version]);
 
   return (
-    <div className={styles["edit-settings-container"]}>
+    <FormWrapper>
       <InputText
         label="Version"
         value={version}
@@ -49,11 +54,11 @@ export const EditSettings: React.FC<Props> = ({ value }) => {
         value={tos}
         onChange={(e) => setTos(e.target.value)}
       ></InputTextarea>
-      <ButtonWrapper>
+      <ButtonWrapper className="-end">
         <Button onClick={updateSettings} size="large">
           Save
         </Button>
       </ButtonWrapper>
-    </div>
+    </FormWrapper>
   );
 };

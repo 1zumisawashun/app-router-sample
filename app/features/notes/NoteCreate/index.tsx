@@ -1,21 +1,59 @@
-import Link from "next/link";
-import NewNote from "./components/NewNote";
+"use client";
+import {
+  AnchorButton,
+  Button,
+  ButtonWrapper,
+  FormWrapper,
+  InputText,
+  InputTextarea,
+} from "@/components";
+import { useRouter } from "next/navigation";
+import { useCallback, useState } from "react";
+import { z } from "zod";
 
-export const metadata = {
-  title: "New Note",
-};
+export const NoteCreate: React.FC = () => {
+  const router = useRouter();
 
-export const NoteCreate = async () => {
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+
+  const createNote = useCallback(async () => {
+    const res = await fetch(`/api/notes`, {
+      method: "POST",
+      body: JSON.stringify({ title, body }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (res.ok) {
+      const id = z.number().parse(await res.json());
+      alert(`${id} Note created`);
+      router.push(`/notes`);
+      // NOTE:現在のページのデータをサーバーから再取得する
+      router.refresh();
+    } else {
+      alert("Note failed to create");
+    }
+  }, [body, router, title]);
+
   return (
-    <main className="mx-2 sm:mx-4">
-      <Link
-        href={`/notes`}
-        className="inline-block focus-visible:ring ring-pink-300 text-gray-500 hover:text-pink-500 active:text-pink-600 text-s md:text-base font-semibold rounded-lg outline-none transition duration-100"
-      >
-        ← back
-      </Link>
-      <h2 className="my-4 text-gray-400 text-xs">New Note</h2>
-      <NewNote></NewNote>
-    </main>
+    <FormWrapper>
+      <InputText
+        label="Title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      ></InputText>
+      <InputTextarea
+        label="Body"
+        value={body}
+        onChange={(e) => setBody(e.target.value)}
+      ></InputTextarea>
+      <ButtonWrapper className="-end">
+        <AnchorButton href={`/notes`} theme="secondary">
+          Cancel
+        </AnchorButton>
+        <Button onClick={createNote}>Create</Button>
+      </ButtonWrapper>
+    </FormWrapper>
   );
 };

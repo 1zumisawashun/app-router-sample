@@ -1,0 +1,15 @@
+@import "@/assets/styles/app.scss";
+
+.custom-text {
+  @include base-text;
+}
+
+.custom-test {
+  color: red;
+  &.-bold {
+    font-weight: bold;
+  }
+  &.-large {
+    font-size: 20px;
+  }
+}

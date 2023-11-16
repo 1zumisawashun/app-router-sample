@@ -1,8 +1,9 @@
 /* Object Layer */
 
+// 77px = headerの高さ
 @mixin base-container {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 77px);
 }
 
 .container-pc {

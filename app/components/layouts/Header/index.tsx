@@ -1,4 +1,9 @@
-import { Loading, NextJsIcon, UnstyledButtonAnchor } from "@/components";
+import {
+  Loading,
+  NextJsIcon,
+  TextButtonAnchor,
+  UnstyledButtonAnchor,
+} from "@/components";
 import { prisma } from "@/functions/libs/prisma";
 import { zVersion } from "@/functions/models/Settings";
 import { Suspense } from "react";
@@ -20,27 +25,18 @@ export const Header: React.FC = () => {
           </UnstyledButtonAnchor>
 
           <nav className="hidden md:flex gap-12">
-            <UnstyledButtonAnchor href="/notes" className={styles["link-item"]}>
+            <TextButtonAnchor href="/notes" size="large">
               Memo
-            </UnstyledButtonAnchor>
-            <UnstyledButtonAnchor
-              href="/help/faq"
-              className={styles["link-item"]}
-            >
+            </TextButtonAnchor>
+            <TextButtonAnchor href="/help/faq" size="large">
               FAQ
-            </UnstyledButtonAnchor>
-            <UnstyledButtonAnchor
-              href="/settings"
-              className={styles["link-item"]}
-            >
+            </TextButtonAnchor>
+            <TextButtonAnchor href="/settings" size="large">
               Setting
-            </UnstyledButtonAnchor>
-            <UnstyledButtonAnchor
-              href="/gallery"
-              className={styles["link-item"]}
-            >
+            </TextButtonAnchor>
+            <TextButtonAnchor href="/gallery" size="large">
               Gallery
-            </UnstyledButtonAnchor>
+            </TextButtonAnchor>
           </nav>
 
           <div>

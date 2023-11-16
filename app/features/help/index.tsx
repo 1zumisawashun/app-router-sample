@@ -12,27 +12,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   return (
     <main>
-      <div className="container-sp _mb-2">
-        <section>
-          <nav className={styles["nav"]}>
-            <UnstyledButtonAnchor
-              href="/help/faq"
-              aria-selected={pathname === "/help/faq"}
-              className={styles["nav-item"]}
-            >
-              FAQ
-            </UnstyledButtonAnchor>
-            <UnstyledButtonAnchor
-              href="/help/tos"
-              aria-selected={pathname === "/help/tos"}
-              className={styles["nav-item"]}
-            >
-              Terms
-            </UnstyledButtonAnchor>
-          </nav>
-          {children}
-        </section>
-      </div>
+      <nav className={styles["nav"]}>
+        <UnstyledButtonAnchor
+          href="/help/faq"
+          aria-selected={pathname === "/help/faq"}
+          className={styles["nav-item"]}
+        >
+          FAQ
+        </UnstyledButtonAnchor>
+        <UnstyledButtonAnchor
+          href="/help/tos"
+          aria-selected={pathname === "/help/tos"}
+          className={styles["nav-item"]}
+        >
+          Terms
+        </UnstyledButtonAnchor>
+      </nav>
+      {children}
     </main>
   );
 }

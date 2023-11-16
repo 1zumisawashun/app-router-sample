@@ -19,9 +19,5 @@ export default async function Layout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <main>
-      <div className="container-sp _mb-2">{children}</div>
-    </main>
-  );
+  return <>{children}</>;
 }
