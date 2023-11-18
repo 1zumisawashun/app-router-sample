@@ -17,7 +17,6 @@
 @import "objects/base-box-shadow";
 @import "objects/base-container";
 @import "objects/base-hover";
-@import "objects/base-line-clamp";
 @import "objects/base-text";
 @import "objects/base-title";
 
@@ -32,3 +31,7 @@
 
 // utilities
 @import "utilities/main";
+@import "utilities/variant-color";
+@import "utilities/variant-position";
+@import "utilities/variant-size";
+@import "utilities/variant-typography";

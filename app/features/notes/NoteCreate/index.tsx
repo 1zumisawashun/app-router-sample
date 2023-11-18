@@ -48,7 +48,7 @@ export const NoteCreate: React.FC = () => {
         value={body}
         onChange={(e) => setBody(e.target.value)}
       ></InputTextarea>
-      <ButtonWrapper className="-end">
+      <ButtonWrapper position="end">
         <AnchorButton href={`/notes`} theme="secondary">
           Cancel
         </AnchorButton>

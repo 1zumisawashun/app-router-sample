@@ -8,23 +8,25 @@ export default function Page() {
   return (
     <section className={styles["index-container"]}>
       <div className={styles["index-wrapper"]}>
-        <p className="text-large -bold -pink">Introducing the App Directory</p>
+        <p className={styles["index-sub-title"]}>
+          Introducing the App Directory
+        </p>
 
-        <h1 className="title-medium -bold">
+        <h1 className={styles["index-title"]}>
           Revolutionary way to build the web
         </h1>
 
         <div className={styles["index-text-wrapper"]}>
-          <p className="text-medium -grey">
+          <p className={styles["index-text"]}>
             Learn about the new features of Next.js 13 through building a note
             application.
           </p>
-          <p className="text-medium -grey">
+          <p className={styles["index-text"]}>
             Front-end development will be more fun.
           </p>
         </div>
 
-        <ButtonWrapper>
+        <ButtonWrapper position="center">
           <AnchorButton href="/notes/new" size="large">
             Add new
           </AnchorButton>

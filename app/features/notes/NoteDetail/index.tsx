@@ -3,6 +3,7 @@ import { AnchorButton, Button, ButtonWrapper } from "@/components";
 import { Note } from "@/functions/models/Notes";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
+import styles from "./styles.module.scss";
 
 type Props = {
   item: Note;
@@ -27,11 +28,11 @@ export const NoteDetail: React.FC<Props> = ({ item }) => {
   }, [item.id, router]);
 
   return (
-    <div className="flex flex-col bg-gray-100 rounded-lg relative p-5 gap-2.5">
-      <h3 className="text-large -pink -bold">{item.title}</h3>
-      <p className="text-normal -grey">{item.body}</p>
+    <div className={styles["note-detail-container"]}>
+      <h3 className={styles["note-detail-title"]}>{item.title}</h3>
+      <p className={styles["note-detail-text"]}>{item.body}</p>
 
-      <ButtonWrapper className="-end">
+      <ButtonWrapper position="end">
         <AnchorButton href={`/notes/${item.id}/edit`}>Edit</AnchorButton>
         <Button onClick={deleteNote} theme="danger">
           Delete

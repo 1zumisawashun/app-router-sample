@@ -1,0 +1,8 @@
+@import "@/assets/styles/app.scss";
+
+.tos-title {
+  composes: text-large _mb-1;
+}
+.tos-text {
+  composes: text-x-small -grey _mb-1;
+}

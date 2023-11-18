@@ -1,49 +1,22 @@
-@mixin base-title {
+.base-title {
   color: #222222;
   font-size: 2rem;
   white-space: pre-line;
   // word-break: break-all;
-  // position
-  &.-left {
-    text-align: left;
-  }
-  &.-right {
-    text-align: right;
-  }
-  &.-center {
-    text-align: center;
-  }
-  // weight
-  &.-bold {
-    font-weight: bold;
-  }
-  //color
-  &.-success {
-    color: $devils-grass;
-  }
-  &.-danger {
-    color: $amour;
-  }
-  &.-grey {
-    color: #718096;
-  }
-  &.-pink {
-    color: #ec4899;
-  }
 }
 
 .title-small {
-  @include base-title;
+  composes: base-title;
   font-size: 1rem;
 }
 .title-normal {
-  @include base-title;
+  composes: base-title;
 }
 .title-medium {
-  @include base-title;
+  composes: base-title;
   font-size: 3rem;
 }
 .title-large {
-  @include base-title;
+  composes: base-title;
   font-size: 4rem;
 }

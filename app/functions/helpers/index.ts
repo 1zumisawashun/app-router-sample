@@ -1,1 +1,0 @@
-export { getVariants } from "./getVariants";

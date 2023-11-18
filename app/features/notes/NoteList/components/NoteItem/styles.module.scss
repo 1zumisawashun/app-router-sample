@@ -1,3 +1,5 @@
+@import "@/assets/styles/app.scss";
+
 .note-item-wrapper {
   position: relative;
   padding: 1.25rem;
@@ -44,4 +46,8 @@
   :hover {
     color: #be185d;
   }
+}
+
+.note-text {
+  composes: text-normal -grey _line-clamp-3;
 }

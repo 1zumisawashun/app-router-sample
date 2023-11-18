@@ -21,7 +21,7 @@ export const NoteItem: React.FC<NoteProps> = ({ item }) => {
       <UnstyledButtonAnchor href={`/notes/${item.id}`} prefetch={false}>
         <h3 className={styles["link-item"]}>{item.title}</h3>
       </UnstyledButtonAnchor>
-      <p className="text-normal -grey line-clamp-3">{item.body}</p>
+      <p className={styles["note-text"]}>{item.body}</p>
     </div>
   );
 };

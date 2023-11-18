@@ -1,19 +1,16 @@
-import { getVariants } from "@/functions/helpers";
-import clsx from "clsx";
 import styles from "./styles.module.scss";
 
 type ButtonWrapperProps = {
   children: React.ReactNode;
-  className?: string;
+  position?: string;
 };
 
 export const ButtonWrapper: React.FC<ButtonWrapperProps> = ({
   children,
-  className,
+  position,
 }) => {
-  const variants = getVariants({ className, styles });
   return (
-    <div className={clsx(styles["button-wrapper"], ...variants)}>
+    <div className={styles["button-wrapper"]} data-position={position}>
       {children}
     </div>
   );

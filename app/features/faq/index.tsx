@@ -1,5 +1,6 @@
 import { Nl2br } from "@/components";
 import { prisma } from "@/functions/libs/prisma";
+import styles from "./styles.module.scss";
 
 // 30秒ごとに再生成
 export const revalidate = 30;
@@ -10,10 +11,8 @@ export default async function Page() {
   });
   return (
     <main>
-      <h1 className="text-large _mb-1">Frequently Asked Questions</h1>
-      <p className="text-x-small -grey _mb-1">
-        The following text is a sample.
-      </p>
+      <h1 className={styles["faq-title"]}>Frequently Asked Questions</h1>
+      <p className={styles["faq-text"]}>The following text is a sample.</p>
       <Nl2br>{data.value}</Nl2br>
     </main>
   );

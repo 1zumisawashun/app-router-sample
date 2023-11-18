@@ -1,16 +1,13 @@
 .button-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   gap: 1rem;
 
-  &.-start {
-    justify-content: flex-start;
+  // button-wrapper-position
+  &[data-position="center"] {
+    justify-content: center;
   }
-  &.-end {
-    justify-content: flex-end;
-  }
-  &.-column {
-    flex-direction: column;
+  &[data-position="end"] {
+    justify-content: end;
   }
 }

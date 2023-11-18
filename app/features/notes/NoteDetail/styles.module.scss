@@ -1,0 +1,19 @@
+@import "@/assets/styles/app.scss";
+
+.note-detail-container {
+  display: flex;
+  position: relative;
+  padding: 1.25rem;
+  flex-direction: column;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6;
+}
+
+.note-detail-title {
+  composes: text-large -pink -bold;
+}
+
+.note-detail-text {
+  composes: text-normal -grey;
+}

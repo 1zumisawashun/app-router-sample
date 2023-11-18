@@ -12,6 +12,19 @@
   flex-direction: column;
   gap: 2rem;
 }
+
+.index-sub-title {
+  composes: text-large -pink -bold;
+}
+
+.index-title {
+  composes: title-medium -bold;
+}
+
+.index-text {
+  composes: text-medium -grey;
+}
+
 .index-text-wrapper {
   display: flex;
   flex-direction: column;
@@ -20,7 +33,7 @@
 }
 
 .index-image-wrapper {
-  @include boxShadow;
+  composes: box-shadow;
   overflow: hidden;
   border-radius: 0.5rem;
 }

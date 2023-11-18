@@ -4,28 +4,29 @@ $small: 0.875rem;
 $medium: 1rem;
 $large: 1.125rem;
 
-// text-button-size
-.text-button[data-size="small"] {
-  font-size: $small;
-}
-.text-button[data-size="medium"] {
-  font-size: $medium;
-}
-.text-button[data-size="large"] {
-  font-size: $large;
-}
-
-// text-button-color
-.text-button[data-color="black"] {
-  color: #4b5563;
-}
-.text-button[data-color="grey"] {
-  color: #718096;
-}
-
 .text-button {
   font-weight: 600;
   transition: color 0.1s;
+
+  // text-button-size
+  &[data-size="small"] {
+    font-size: $small;
+  }
+  &[data-size="medium"] {
+    font-size: $medium;
+  }
+  &[data-size="large"] {
+    font-size: $large;
+  }
+
+  // text-button-color
+  &[data-color="black"] {
+    color: #4b5563;
+  }
+  &[data-color="grey"] {
+    color: #718096;
+  }
+
   @include hoverAnime {
     color: #ec4899;
   }

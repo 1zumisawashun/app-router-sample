@@ -1,16 +1,16 @@
 @import "@/assets/styles/app.scss";
 
-$small: 12px;
-$medium: 14px;
-$large: 16px;
+$small: 0.875rem;
+$medium: 1rem;
+$large: 1.125rem;
 
 $small-pd-y: 10px;
-$medium-pd-y: 11px;
-$large-pd-y: 13px;
+$medium-pd-y: 12px;
+$large-pd-y: 14px;
 
-$small-pd-x: 16px;
-$medium-pd-x: 20px;
-$large-pd-x: 24px;
+$small-pd-x: 18px;
+$medium-pd-x: 22px;
+$large-pd-x: 26px;
 
 .module {
   font-weight: 700;
@@ -30,11 +30,8 @@ $large-pd-x: 24px;
     opacity: 0.5;
     transition: opacity 0.3s ease;
   }
-  // @include focusAnime {
-  //   opacity: 0.5;
-  //   transition: opacity 0.3s ease;
-  // }
-  @include boxShadow();
+
+  composes: box-shadow;
 
   &::before {
     background: $overlay;
@@ -48,66 +45,66 @@ $large-pd-x: 24px;
     top: -1px;
     z-index: 2;
   }
-}
 
-// button-disabled
-.module[aria-disabled="true"] {
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-.module[aria-disabled="true"]::before {
-  opacity: 0.5;
-}
+  // button-disabled
+  &[aria-disabled="true"] {
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+  &[aria-disabled="true"]::before {
+    opacity: 0.5;
+  }
 
-// button-size
-.module[data-size="small"] {
-  font-size: $small;
-  padding: $small-pd-y $small-pd-x;
-}
-.module[data-size="medium"] {
-  font-size: $medium;
-  padding: $medium-pd-y $medium-pd-x;
-}
-.module[data-size="large"] {
-  font-size: $large;
-  padding: $large-pd-y $large-pd-x;
-}
+  // button-size
+  &[data-size="small"] {
+    font-size: $small;
+    padding: $small-pd-y $small-pd-x;
+  }
+  &[data-size="medium"] {
+    font-size: $medium;
+    padding: $medium-pd-y $medium-pd-x;
+  }
+  &[data-size="large"] {
+    font-size: $large;
+    padding: $large-pd-y $large-pd-x;
+  }
 
-// button-variant-color
-.module[data-variant="contained"][data-theme="primary"] {
-  color: white;
-  background-color: $pop-that-gum;
-  border: 1px solid $pop-that-gum;
-}
-.module[data-variant="outlined"][data-theme="primary"] {
-  color: $pop-that-gum;
-  background-color: white;
-  border: 1px solid $pop-that-gum;
-}
-.module[data-variant="contained"][data-theme="danger"] {
-  color: white;
-  background-color: $amour;
-  border: 1px solid $amour;
-}
-.module[data-variant="outlined"][data-theme="danger"] {
-  color: $amour;
-  background-color: white;
-  border: 1px solid $amour;
-}
-.module[data-variant="contained"][data-theme="success"] {
-  color: white;
-  background-color: $devils-grass;
-  border: 1px solid $devils-grass;
-}
-.module[data-variant="outlined"][data-theme="success"] {
-  color: $devils-grass;
-  background-color: white;
-  border: 1px solid $devils-grass;
-}
+  // button-variant-color
+  &[data-variant="contained"][data-theme="primary"] {
+    color: white;
+    background-color: $pop-that-gum;
+    border: 1px solid $pop-that-gum;
+  }
+  &[data-variant="outlined"][data-theme="primary"] {
+    color: $pop-that-gum;
+    background-color: white;
+    border: 1px solid $pop-that-gum;
+  }
+  &[data-variant="contained"][data-theme="danger"] {
+    color: white;
+    background-color: $amour;
+    border: 1px solid $amour;
+  }
+  &[data-variant="outlined"][data-theme="danger"] {
+    color: $amour;
+    background-color: white;
+    border: 1px solid $amour;
+  }
+  &[data-variant="contained"][data-theme="success"] {
+    color: white;
+    background-color: $devils-grass;
+    border: 1px solid $devils-grass;
+  }
+  &[data-variant="outlined"][data-theme="success"] {
+    color: $devils-grass;
+    background-color: white;
+    border: 1px solid $devils-grass;
+  }
 
-// variantと関係ない独立したbutton
-.module[data-theme="secondary"] {
-  color: #6b7280;
-  background-color: #e5e7eb;
-  border: 1px solid #e5e7eb;
+  // variantと関係ない独立したbutton
+  &[data-theme="secondary"] {
+    color: #6b7280;
+    background-color: #e5e7eb;
+    border: 1px solid #e5e7eb;
+  }
 }

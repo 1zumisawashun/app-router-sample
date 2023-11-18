@@ -49,7 +49,7 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
         onChange={(e) => setBody(e.target.value)}
       ></InputTextarea>
 
-      <ButtonWrapper className="-end">
+      <ButtonWrapper position="end">
         <AnchorButton href={`/notes/${item.id}`} theme="secondary">
           Cancel
         </AnchorButton>

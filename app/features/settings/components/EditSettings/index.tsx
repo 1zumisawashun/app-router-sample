@@ -54,7 +54,7 @@ export const EditSettings: React.FC<Props> = ({ value }) => {
         value={tos}
         onChange={(e) => setTos(e.target.value)}
       ></InputTextarea>
-      <ButtonWrapper className="-end">
+      <ButtonWrapper position="end">
         <Button onClick={updateSettings} size="large">
           Save
         </Button>
