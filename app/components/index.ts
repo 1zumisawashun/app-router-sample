@@ -23,6 +23,3 @@ export { InputTextarea } from "./forms/InputTextarea";
 export { InputWrapper } from "./forms/InputWrapper";
 
 /* layouts */
-export { SubHeader } from "./layouts/SubHeader";
-// NOTE:server-onlyを宣言しているので下記をimportするとエラーになる
-// export { Header } from "./layouts/Header";

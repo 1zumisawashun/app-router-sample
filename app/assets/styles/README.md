@@ -10,7 +10,7 @@
 
 # CSS Modules
 
-- 動的なスタイルは data-〇〇で変更する  
+- 動的なスタイルは data-〇〇で変更する（基本的にはコンポーネント化されるはず）  
   （例:button-wrapper, button）
 - 汎用的なスタイルを使用する場合は composes を使って app/assets/styles/からモディファイア（RSCSS でいうところの variants）を呼ぶ
   （例:text-normal -bold -grey）

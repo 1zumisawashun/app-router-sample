@@ -1,5 +1,7 @@
-import { AddIcon, SubHeader, UnstyledButtonAnchor } from "@/components";
+import { AddIcon, UnstyledButtonAnchor } from "@/components";
+import { SubHeader } from "@/components/layouts";
 import { NoteList } from "@/features/notes/NoteList";
+import "server-only";
 import styles from "./styles.module.scss";
 
 export default async function Page() {
@@ -14,7 +16,7 @@ export default async function Page() {
         </span>
         <span className="sr-only">New Note</span>
       </UnstyledButtonAnchor>
-      
+
       <SubHeader title="List Notes">
         <div className="_mt-2">
           <NoteList />

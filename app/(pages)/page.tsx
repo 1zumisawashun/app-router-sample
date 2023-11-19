@@ -1,6 +1,6 @@
 import Index from "@/features/index";
+import "server-only";
 
-// NOTE:use client宣言しなくてもいいの？
 export default function Page() {
   return <Index />;
 }

@@ -1,4 +1,4 @@
-import { SubHeader } from "@/components";
+import { SubHeader } from "@/components/layouts/SubHeader";
 import { getNote } from "@/features/notes/NoteDetail/hooks/getNote";
 import { NoteEdit } from "@/features/notes/NoteEdit";
 

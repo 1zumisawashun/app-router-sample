@@ -1,4 +1,4 @@
-import { SubHeader } from "@/components";
+import { SubHeader } from "@/components/layouts/SubHeader";
 import { NoteCreate } from "@/features/notes/NoteCreate";
 
 export default async function Page() {

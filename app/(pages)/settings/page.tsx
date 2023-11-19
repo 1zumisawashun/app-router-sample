@@ -1,4 +1,4 @@
-import { SubHeader } from "@/components";
+import { SubHeader } from "@/components/layouts/SubHeader";
 import Settings from "@/features/settings";
 
 export default async function Page() {

@@ -1,9 +1,9 @@
 import coverPic from "@/assets/images/image-cover.jpg";
 import { AnchorButton, ButtonWrapper } from "@/components";
 import Image from "next/image";
+import "server-only";
 import styles from "./styles.module.scss";
 
-// NOTE:use client宣言しなくてもいいの？
 export default function Page() {
   return (
     <section className={styles["index-container"]}>

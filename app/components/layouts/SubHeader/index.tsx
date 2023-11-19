@@ -1,4 +1,5 @@
 import { TextButtonAnchor } from "@/components";
+import "server-only";
 
 type SubHeaderProps = {
   children: React.ReactNode;
