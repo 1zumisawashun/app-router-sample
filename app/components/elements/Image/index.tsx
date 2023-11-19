@@ -3,8 +3,7 @@ import NextImage from "next/image";
 type Image = {
   src: string;
   alt: string;
-  width?: number;
-  height?: number;
+  blurredDataUrl?: string;
 };
 
 // NOTE:Image型を内包していればok
@@ -15,8 +14,11 @@ export const Image = async <T,>(image: HasImageProperties<T>) => {
     <NextImage
       src={image.src}
       alt={image.alt}
-      width={image?.width ?? 250}
-      height={image?.height ?? 250}
+      fill
+      sizes="276px" // NOTE:https://ausi.github.io/respimagelint/
+      className="object-cover group-hover:opacity-75"
+      placeholder="blur"
+      blurDataURL={image.blurredDataUrl}
     ></NextImage>
   );
 };
