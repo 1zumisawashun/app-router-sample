@@ -8,10 +8,14 @@ export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
 /* elements */
 export { CircularProgress } from "./elements/CircularProgress";
 export { ErrorBoundary } from "./elements/ErrorBoundary";
-export { FetchError } from "./elements/FetchError";
-export { Image } from "./elements/Image";
-export { Loading } from "./elements/Loading";
+export { ErrorEmpty } from "./elements/ErrorEmpty";
+export { ErrorFetch } from "./elements/ErrorFetch";
+export { Image, ImageCover } from "./elements/Image";
+export { Label } from "./elements/Label";
+export { Loading, LoadingWithOverlay } from "./elements/Loading";
+export { Modal } from "./elements/Modal";
 export { Nl2br } from "./elements/Nl2br";
+export { Panel } from "./elements/Panel";
 export { AddIcon, EditIcon, NextJsIcon } from "./elements/SvgIcon";
 
 /* forms */

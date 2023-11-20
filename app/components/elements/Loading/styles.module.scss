@@ -1,8 +1,14 @@
+@import '@/assets/styles/app.scss';
+
+/**
+ * ==================================
+ * loading
+ * ==================================
+ */
 .loading-wrapper {
   display: flex;
   justify-content: center;
 }
-
 .loading-1 {
   animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
   height: 0.5rem;
@@ -10,7 +16,6 @@
   background-color: #ff00ff;
   border-radius: 9999px;
 }
-
 .loading-2 {
   animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
   height: 0.5rem;
@@ -21,10 +26,49 @@
   margin-right: 1rem;
 }
 
-@keyframes ping {
-  75%,
-  100% {
-    transform: scale(2);
-    opacity: 0;
+/**
+ * ==================================
+ * loading-with-overlay
+ * ==================================
+ */
+.loading-with-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px); /* 一番下のbody領域をぼやかす */
+  z-index: 5;
+}
+.loading-with-overlay-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+.loading {
+  border: 1px solid $vintage-blue;
+  display: inline-block;
+  position: relative;
+  animation: loading ease 1.5s infinite;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 30px auto;
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: $vintage-blue;
+    border-radius: 50%;
   }
 }
+

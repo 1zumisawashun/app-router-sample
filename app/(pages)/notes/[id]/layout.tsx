@@ -4,7 +4,6 @@ import { Metadata } from "next/types";
 // NOTE:トップレベルでexportしないと意味がない
 export const revalidate = 0;
 
-// ページのメタデータを動的に取得
 export async function generateMetadata({
   params,
 }: {

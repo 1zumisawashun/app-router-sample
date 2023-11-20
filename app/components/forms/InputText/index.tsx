@@ -17,6 +17,7 @@ export const InputText = forwardRef<HTMLInputElement, InputFieldProps>(
       isOptioned,
       isRequired,
       disabled,
+      width,
       ...props
     },
     ref
@@ -31,6 +32,7 @@ export const InputText = forwardRef<HTMLInputElement, InputFieldProps>(
         isOptioned={isOptioned}
         isRequired={isRequired}
         disabled={disabled}
+        width={width}
       >
         <input
           className={styles["input-text"]}

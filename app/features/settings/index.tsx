@@ -3,11 +3,7 @@ import { zSettings } from "@/functions/models/Settings";
 import "server-only";
 import { EditSettings } from "./components/EditSettings";
 
-export const revalidate = 0;
 
-export const metadata = {
-  title: "Settings",
-};
 
 export default async function Page() {
   const settings = await getSettings();

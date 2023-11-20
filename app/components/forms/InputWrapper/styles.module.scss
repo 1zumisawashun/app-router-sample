@@ -4,6 +4,9 @@
   display: grid;
   gap: 3px;
 }
+.input-wrapper[data-width="full"] {
+  width: 100%;
+}
 .input-wrapper-label[aria-disabled="true"] {
   pointer-events: none;
 }

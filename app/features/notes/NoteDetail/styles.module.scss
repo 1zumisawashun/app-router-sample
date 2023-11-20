@@ -17,3 +17,14 @@
 .note-detail-text {
   composes: text-normal -grey;
 }
+
+.note-detail-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.note-detail-modal-text {
+  composes: text-normal -grey -bold;
+}

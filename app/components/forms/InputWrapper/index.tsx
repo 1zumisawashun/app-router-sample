@@ -1,3 +1,4 @@
+import { WidthType } from "@/functions/types/Common";
 import { FC, ReactNode } from "react";
 import { InputLabel } from "../InputLabel";
 import styles from "./styles.module.scss";
@@ -12,7 +13,9 @@ type InputWrapperProps = {
   isOptioned?: boolean;
   isRequired?: boolean;
   disabled?: boolean;
+  width?: WidthType;
 };
+
 export type InputWrapperPropsPassThroughProps = Omit<
   InputWrapperProps,
   "children" | "className" | "id"
@@ -27,9 +30,10 @@ export const InputWrapper: FC<InputWrapperProps> = ({
   isOptioned = false,
   isRequired = false,
   disabled,
+  width = "auto",
 }) => {
   return (
-    <div className={styles["input-wrapper"]}>
+    <div className={styles["input-wrapper"]} data-width={width}>
       <label
         className={styles["input-wrapper-label"]}
         htmlFor={id}
