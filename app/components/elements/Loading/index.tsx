@@ -10,12 +10,3 @@ export const Loading: React.FC = () => {
   );
 };
 
-export const LoadingWithOverlay: React.FC = () => {
-  return (
-    <div className={styles["loading-with-overlay"]}>
-      <div className={styles["loading-with-overlay-wrapper"]}>
-        <span className={styles["loading"]} />
-      </div>
-    </div>
-  );
-};

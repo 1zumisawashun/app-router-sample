@@ -2,6 +2,13 @@
 
 app-router-sample のリポジトリです。
 
+# TODO
+
+- prisma で category プロパティの追加
+- prisma で src プロパティの追加
+- storybook の追加
+- react-hook-form の追加
+
 ## Overview
 
 Next.js App Router を案件で導入する前にある程度慣れた上で使用可否を判断したいので作成しました。

@@ -38,12 +38,14 @@
   text-underline-offset: 2px;
   word-break: break-all;
 
+  composes: _line-clamp-1;
+
   @media (min-width: 768px) {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 
-  :hover {
+  &:hover {
     color: #be185d;
   }
 }
