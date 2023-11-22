@@ -1,7 +1,9 @@
 import type { ImageResults, Photo } from "@/functions/models/Images";
 import { getPlaiceholder } from "plaiceholder";
 
-{/* NOTE:check plaiceholder */}
+{
+  /* NOTE:check plaiceholder */
+}
 async function getBase64(imageUrl: string) {
   try {
     const res = await fetch(imageUrl);
@@ -17,6 +19,7 @@ async function getBase64(imageUrl: string) {
     return base64;
   } catch (error) {
     if (error instanceof Error) console.log(error.stack);
+    return undefined;
   }
 }
 

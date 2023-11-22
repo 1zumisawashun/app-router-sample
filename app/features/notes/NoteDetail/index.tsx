@@ -24,6 +24,7 @@ export const NoteDetail: React.FC<Props> = ({ item }) => {
     if (res.ok) {
       alert("Note deleted");
       router.push(`/notes`);
+      // NOTE:現在のページのデータをサーバーから再取得する
       router.refresh();
     } else {
       alert("Note failed to delete");

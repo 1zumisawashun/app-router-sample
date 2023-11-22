@@ -16,10 +16,8 @@
   align-items: center;
 }
 .input-wrapper-description {
-  font-size: 1.4rem;
-  color: $basalt-grey;
+  composes: text-small -grey;
 }
 .input-wrapper-error {
-  font-size: 1.4rem;
-  color: $spicy-berry;
+  composes: text-small -error;
 }

@@ -31,6 +31,7 @@ export const EditSettings: React.FC<Props> = ({ value }) => {
     });
     if (res.ok) {
       alert("Settings updated");
+      // NOTE:現在のページのデータをサーバーから再取得する
       router.refresh();
     } else {
       alert("Settings failed to update");

@@ -30,6 +30,7 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
     if (res.ok) {
       alert("Note updated");
       router.push(`/notes/${item.id}`);
+      // NOTE:現在のページのデータをサーバーから再取得する
       router.refresh();
     } else {
       alert("Note failed to update");

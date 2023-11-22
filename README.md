@@ -1,4 +1,4 @@
-# next-prisma-stripe-sample
+# app router sample
 
 app-router-sample のリポジトリです。
 
@@ -47,7 +47,8 @@ css: CSS Modules, Sass
 backend: Next.js API Routes
 orm: Prisma
 db: SQLite
-library: zod, envalid, happy-css-modules, SWR
+catalog: Storybook
+library: zod, envalid, happy-css-modules, SWR, react-hook-form
 ```
 
 ## Installation

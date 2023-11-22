@@ -1,9 +1,9 @@
 import { ComponentPropsWithRef, forwardRef, useId } from "react";
-import styles from "../InputText/styles.module.scss";
 import {
   InputWrapper,
   InputWrapperPropsPassThroughProps,
 } from "../InputWrapper";
+import styles from "./styles.module.scss";
 
 export type SelectOption<T extends string = string> = {
   value: T;
@@ -41,21 +41,23 @@ export const InputSelect = forwardRef<HTMLSelectElement, InputSelectProps>(
         isOptioned={isOptioned}
         isRequired={isRequired}
       >
-        <select
-          className={styles["input-text"]}
-          {...props}
-          ref={ref}
-          id={id}
-          data-error={Boolean(error)}
-          disabled={disabled}
-        >
-          <option selected>未選択</option>
-          {options.map((option) => (
-            <option key={option.value} value={option.value}>
-              {option.label}
-            </option>
-          ))}
-        </select>
+        <div className={styles["input-select-wrapper"]}>
+          <select
+            className={styles["input-select"]}
+            {...props}
+            ref={ref}
+            id={id}
+            data-error={Boolean(error)}
+            disabled={disabled}
+          >
+            <option selected>未選択</option>
+            {options.map((option) => (
+              <option key={option.value} value={option.value}>
+                {option.label}
+              </option>
+            ))}
+          </select>
+        </div>
       </InputWrapper>
     );
   }
