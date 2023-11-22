@@ -1,15 +1,10 @@
+import { SelectOptions } from "@/functions/types/Common";
 import { ComponentPropsWithRef, forwardRef, useId } from "react";
 import {
   InputWrapper,
   InputWrapperPropsPassThroughProps,
 } from "../InputWrapper";
 import styles from "./styles.module.scss";
-
-export type SelectOption<T extends string = string> = {
-  value: T;
-  label: string;
-};
-export type SelectOptions<T extends string = string> = SelectOption<T>[];
 
 export type SelectProps = ComponentPropsWithRef<"select"> & {
   options: SelectOptions;

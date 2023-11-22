@@ -1,0 +1,53 @@
+.input-radio-label {
+  align-items: center;
+  border-radius: 2px;
+  color: black;
+  display: inline-flex;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.input-radio-icon {
+  align-items: center;
+  border: solid 1px black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: transparent;
+  display: inline-flex;
+  font-size: 0.875em;
+  height: 20px;
+  justify-content: center;
+  width: 20px;
+}
+
+// NOTE:「+」を使うことでpropsをinputに集約することができる
+.input-radio-input:checked + .input-radio-icon {
+  background-color: transparent;
+  border: solid 1px green;
+  color: green;
+}
+
+.input-radio-input[data-error="true"] + .input-radio-icon {
+  background-color: transparent;
+  border: solid 1px red;
+  color: red;
+}
+
+.input-radio-input:disabled + .input-radio-icon {
+  opacity: 0.3;
+}
+
+// NOTE:childrenが存在すればmarginを当てる
+.input-radio-text:not(:empty) {
+  margin-left: 8px;
+}
+
+// NOTE:これは存在するorしないが確定していないから「~」を指定している?
+.input-radio-input:checked ~ .input-radio-text {
+  color: black;
+}
+
+.input-radio-input:disabled ~ .input-radio-text {
+  color: black;
+}
