@@ -12,10 +12,11 @@
     "hcm:watch": "hcm './app/**/*.module.{css,scss,less}' --watch",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "prisma:seed": "prisma db seed --preview-feature",
+    "prisma:seed": "prisma db seed",
     "prisma:dev": "run-s -l prisma:generate prisma:migrate prisma:seed",
     "prisma:format": "npx prisma format",
     "prisma:studio": "npx prisma studio",
+    "prisma:reset": "npx prisma db push --force-reset && npm run prisma:seed",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -56,9 +57,11 @@
     "storybook": "^7.5.3",
     "tailwindcss": "^3.3.0",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.3.0",
     "typescript": "^5"
   },
   "prisma": {
-    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+    "seed": "ts-node -r tsconfig-paths/register --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   }
 }

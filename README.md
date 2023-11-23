@@ -8,6 +8,7 @@ app-router-sample のリポジトリです。
 - prisma で src プロパティの追加
 - storybook の追加
 - react-hook-form の追加
+- NextAuth の追加
 
 ## Overview
 
