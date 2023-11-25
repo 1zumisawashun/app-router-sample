@@ -1,6 +1,5 @@
 {
-  "extends": "@tsconfig/strictest/tsconfig",
-  // "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/next/tsconfig"],
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/next/tsconfig"],
   "compilerOptions": {
     "target": "es5",
     "exactOptionalPropertyTypes": false,

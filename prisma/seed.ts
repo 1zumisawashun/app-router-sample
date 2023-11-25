@@ -8,8 +8,8 @@ const prisma = new PrismaClient();
 async function main() {
   // delete all
   await prisma.metadata.deleteMany();
-  await prisma.note.deleteMany();
   await prisma.category.deleteMany();
+  await prisma.note.deleteMany();
 
   // seeding
   for (const metadata of metadatas) {
@@ -18,15 +18,16 @@ async function main() {
     });
   }
 
-  for (const note of notes) {
-    await prisma.note.create({
-      data: note,
-    });
-  }
-
+  // NOTE:categoryが存在しないとnotes作成でconnectできないので先にcategoryを作成する
   for (const category of categories) {
     await prisma.category.create({
       data: category,
+    });
+  }
+
+  for (const note of notes) {
+    await prisma.note.create({
+      data: note,
     });
   }
 }

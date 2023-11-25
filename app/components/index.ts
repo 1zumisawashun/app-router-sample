@@ -1,7 +1,6 @@
 /* buttons */
 export { AnchorButton } from "./buttons/AnchorButton";
 export { Button } from "./buttons/Button";
-export { ButtonWrapper } from "./buttons/ButtonWrapper";
 export { TextButton, TextButtonAnchor } from "./buttons/TextButton";
 export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
 
@@ -10,6 +9,7 @@ export { CircularProgress } from "./elements/CircularProgress";
 export { ErrorBoundary } from "./elements/ErrorBoundary";
 export { ErrorEmpty } from "./elements/ErrorEmpty";
 export { ErrorFetch } from "./elements/ErrorFetch";
+export { FlexWrapper } from "./elements/FlexWrapper";
 export { Image, ImageCover } from "./elements/Image";
 export { Label } from "./elements/Label";
 export { Loading } from "./elements/Loading";

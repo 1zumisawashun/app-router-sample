@@ -1,6 +1,7 @@
 import { AddIcon, UnstyledButtonAnchor } from "@/components";
 import { SubHeader } from "@/components/layouts";
 import { NoteList } from "@/features/notes/NoteList";
+import { SearchParams } from "@/functions/types/Common";
 import "server-only";
 import styles from "./styles.module.scss";
 
@@ -11,7 +12,14 @@ export const metadata = {
   title: "List Notes",
 };
 
-export default async function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  // SCでクエリの取得をする
+  const category = searchParams["category"];
+
   return (
     <main className="relative">
       <UnstyledButtonAnchor
@@ -26,7 +34,7 @@ export default async function Page() {
 
       <SubHeader title="List Notes">
         <div className="_mt-2">
-          <NoteList />
+          <NoteList category={category} />
         </div>
       </SubHeader>
     </main>

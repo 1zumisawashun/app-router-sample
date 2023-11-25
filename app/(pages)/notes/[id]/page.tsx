@@ -6,10 +6,11 @@ import { getNote } from "@/features/notes/NoteDetail/hooks/getNote";
 export const revalidate = 0;
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const note = await getNote(params.id);
+  const note = await getNote(params.id); // server-only
   return (
     <SubHeader href={`/notes`} title="View Note">
-      <NoteDetail item={note} />
+      {/* 普通のpropsでもSCで取得したデータはCCに流せるぽい */}
+      <NoteDetail item={note} /> {/* use client */}
     </SubHeader>
   );
 }

@@ -16,3 +16,5 @@ export type SelectOption<T extends string = string> = {
 };
 
 export type SelectOptions<T extends string = string> = SelectOption<T>[];
+
+export type SearchParams = { [key: string]: string | string[] | undefined };

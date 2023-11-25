@@ -1,5 +1,5 @@
 import coverPic from "@/assets/images/image-cover.jpg";
-import { AnchorButton, ButtonWrapper } from "@/components";
+import { AnchorButton, FlexWrapper } from "@/components";
 import Image from "next/image";
 import "server-only";
 import styles from "./styles.module.scss";
@@ -26,14 +26,14 @@ export default function Page() {
           </p>
         </div>
 
-        <ButtonWrapper position="center">
+        <FlexWrapper position="center">
           <AnchorButton href="/notes/new" size="large">
             Add new
           </AnchorButton>
           <AnchorButton href="/notes" variant="outlined" size="large">
             View list
           </AnchorButton>
-        </ButtonWrapper>
+        </FlexWrapper>
       </div>
 
       <div className={styles["index-image-wrapper"]}>

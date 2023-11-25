@@ -1,5 +1,12 @@
 "use client";
-import { AnchorButton, Button, ButtonWrapper, Modal } from "@/components";
+import {
+  AnchorButton,
+  Button,
+  FlexWrapper,
+  Label,
+  Modal,
+  UnstyledButtonAnchor,
+} from "@/components";
 import { useDisclosure } from "@/functions/hooks";
 import { Note } from "@/functions/models/Notes";
 import { useRouter } from "next/navigation";
@@ -35,14 +42,28 @@ export const NoteDetail: React.FC<Props> = ({ item }) => {
     <>
       <div className={styles["note-detail-container"]}>
         <h3 className={styles["note-detail-title"]}>{item.title}</h3>
+
+        {item.categories ? (
+          <FlexWrapper>
+            {item.categories.map((category) => (
+              <UnstyledButtonAnchor
+                key={category.id}
+                href={`/notes?category=${category.name}`}
+              >
+                <Label>{category.name}</Label>
+              </UnstyledButtonAnchor>
+            ))}
+          </FlexWrapper>
+        ) : null}
+
         <p className={styles["note-detail-text"]}>{item.body}</p>
 
-        <ButtonWrapper position="end">
+        <FlexWrapper position="end">
           <AnchorButton href={`/notes/${item.id}/edit`}>Edit</AnchorButton>
           <Button onClick={deleteModal.open} theme="secondary">
             Delete
           </Button>
-        </ButtonWrapper>
+        </FlexWrapper>
       </div>
 
       <Modal isOpen={deleteModal.isOpen} close={deleteModal.close}>
@@ -50,14 +71,14 @@ export const NoteDetail: React.FC<Props> = ({ item }) => {
           <p className={styles["note-detail-modal-text"]}>
             本当に削除しますか？
           </p>
-          <ButtonWrapper position="center">
+          <FlexWrapper position="center">
             <Button onClick={deleteModal.close} theme="secondary">
               Cancel
             </Button>
             <Button onClick={deleteNote} theme="danger">
               Delete
             </Button>
-          </ButtonWrapper>
+          </FlexWrapper>
         </div>
       </Modal>
     </>

@@ -1,9 +1,9 @@
-.button-wrapper {
+.flex-wrapper {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 
-  // button-wrapper-position
+  // flex-wrapper-position
   &[data-position="center"] {
     justify-content: center;
   }

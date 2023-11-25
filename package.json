@@ -16,6 +16,7 @@
     "prisma:dev": "run-s -l prisma:generate prisma:migrate prisma:seed",
     "prisma:format": "npx prisma format",
     "prisma:studio": "npx prisma studio",
+    "prisma:push": "npx prisma db push",
     "prisma:reset": "npx prisma db push --force-reset && npm run prisma:seed",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"

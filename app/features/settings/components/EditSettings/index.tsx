@@ -1,7 +1,7 @@
 "use client";
 import {
   Button,
-  ButtonWrapper,
+  FlexWrapper,
   FormWrapper,
   InputText,
   InputTextarea,
@@ -55,11 +55,11 @@ export const EditSettings: React.FC<Props> = ({ value }) => {
         value={tos}
         onChange={(e) => setTos(e.target.value)}
       ></InputTextarea>
-      <ButtonWrapper position="end">
+      <FlexWrapper position="end">
         <Button onClick={updateSettings} size="large">
           Save
         </Button>
-      </ButtonWrapper>
+      </FlexWrapper>
     </FormWrapper>
   );
 };

@@ -2,7 +2,7 @@
 import {
   AnchorButton,
   Button,
-  ButtonWrapper,
+  FlexWrapper,
   FormWrapper,
   InputText,
   InputTextarea,
@@ -48,12 +48,12 @@ export const NoteCreate: React.FC = () => {
         value={body}
         onChange={(e) => setBody(e.target.value)}
       ></InputTextarea>
-      <ButtonWrapper position="end">
+      <FlexWrapper position="end">
         <AnchorButton href={`/notes`} theme="secondary">
           Cancel
         </AnchorButton>
         <Button onClick={createNote}>Create</Button>
-      </ButtonWrapper>
+      </FlexWrapper>
     </FormWrapper>
   );
 };

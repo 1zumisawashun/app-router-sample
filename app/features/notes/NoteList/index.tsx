@@ -1,12 +1,15 @@
 import { ErrorBoundary, ErrorFetch, Loading } from "@/components";
 import { apiUrl } from "@/functions/constants/api";
 import { zNotes } from "@/functions/models/Notes";
+import { SearchParams } from "@/functions/types/Common";
 import { Suspense } from "react";
 import "server-only";
 import NoteLists from "./components/NoteList";
 
-export const NoteList = async () => {
+export const NoteList = async ({ category }: SearchParams) => {
   const notes = await getNotes();
+  console.log(category);
+  // TODO:クエリでフィルターをする
 
   return (
     <ErrorBoundary fallback={<ErrorFetch />}>
@@ -18,6 +21,7 @@ export const NoteList = async () => {
 };
 
 const getNotes = async () => {
+  // ssrしている
   const res = await fetch(`${apiUrl}/notes`, { cache: "no-store" });
   const data = await res.json();
   const notes = zNotes.parse(data);
