@@ -11,7 +11,7 @@ type ButtonProps = {
 } & UnstyledButtonProps;
 
 export const Button = ({
-  type,
+  type = "button",
   children,
   theme = "primary",
   variant = "contained",
@@ -24,7 +24,7 @@ export const Button = ({
   return (
     <UnstyledButton
       {...props}
-      type="button"
+      type={type}
       className={styles["module"]}
       data-variant={variant}
       data-theme={theme}

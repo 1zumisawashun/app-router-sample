@@ -26,4 +26,32 @@ export const notes: Prisma.NoteCreateInput[] = [
     title: "Fourth note",
     body: "This is the fourth note.",
   },
+  {
+    title: "Fifth note",
+    body: "This is the fourth note.",
+  },
+  {
+    title: "Sixth note",
+    body: "This is the fourth note.",
+  },
+  {
+    title: "Seventh note",
+    body: "This is the fourth note.",
+  },
+  {
+    title: "Eighth note",
+    body: "This is the fourth note.",
+  },
+  {
+    title: "Fourth note",
+    body: "This is the fourth note.",
+  },
+  {
+    title: "Nineth note",
+    body: "This is the fourth note.",
+  },
+  {
+    title: "Tenth note",
+    body: "This is the fourth note.",
+  },
 ];

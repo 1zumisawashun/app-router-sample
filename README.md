@@ -9,6 +9,7 @@ app-router-sample のリポジトリです。
 - storybook の追加
 - react-hook-form の追加
 - NextAuth の追加
+- SC には明示的に server-only・CC には明示的に use client を宣言する
 
 ## Overview
 

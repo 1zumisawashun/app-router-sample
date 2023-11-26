@@ -29,7 +29,7 @@ export const TextButton = ({
   return (
     <button
       {...props}
-      type="button"
+      type={type}
       className={styles["text-button"]}
       data-color={color}
       data-size={size}
