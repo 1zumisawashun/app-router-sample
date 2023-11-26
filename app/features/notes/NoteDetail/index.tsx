@@ -2,12 +2,12 @@
 import {
   AnchorButton,
   Button,
+  Dialog,
   FlexWrapper,
   Label,
-  Modal,
   UnstyledButtonAnchor,
 } from "@/components";
-import { useDisclosure } from "@/functions/hooks";
+import { useDialog } from "@/functions/hooks";
 import { Note } from "@/functions/models/Notes";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";
@@ -19,7 +19,7 @@ type Props = {
 
 export const NoteDetail: React.FC<Props> = ({ item }) => {
   const router = useRouter();
-  const deleteModal = useDisclosure();
+  const deleteDialog = useDialog();
 
   const deleteNote = useCallback(async () => {
     const res = await fetch(`/api/notes/${item.id}`, {
@@ -60,19 +60,20 @@ export const NoteDetail: React.FC<Props> = ({ item }) => {
 
         <FlexWrapper position="end">
           <AnchorButton href={`/notes/${item.id}/edit`}>Edit</AnchorButton>
-          <Button onClick={deleteModal.open} theme="secondary">
+          <Button onClick={deleteDialog.open} theme="secondary">
             Delete
           </Button>
         </FlexWrapper>
       </div>
 
-      <Modal isOpen={deleteModal.isOpen} close={deleteModal.close}>
+      {/* 最悪deleteDialogとonClick流せばコンポーネントに切り出せるか */}
+      <Dialog ref={deleteDialog.ref} close={deleteDialog.close}>
         <div className={styles["note-detail-modal-body"]}>
           <p className={styles["note-detail-modal-text"]}>
             本当に削除しますか？
           </p>
           <FlexWrapper position="center">
-            <Button onClick={deleteModal.close} theme="secondary">
+            <Button onClick={deleteDialog.close} theme="secondary">
               Cancel
             </Button>
             <Button onClick={deleteNote} theme="danger">
@@ -80,7 +81,7 @@ export const NoteDetail: React.FC<Props> = ({ item }) => {
             </Button>
           </FlexWrapper>
         </div>
-      </Modal>
+      </Dialog>
     </>
   );
 };

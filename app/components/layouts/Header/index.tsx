@@ -37,6 +37,9 @@ export const Header: React.FC = () => {
             <TextButtonAnchor href="/gallery" size="large">
               Gallery
             </TextButtonAnchor>
+            <TextButtonAnchor href="/login" size="large">
+              Login
+            </TextButtonAnchor>
           </nav>
 
           <div>

@@ -6,6 +6,8 @@ export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
 
 /* elements */
 export { CircularProgress } from "./elements/CircularProgress";
+export { Dialog } from "./elements/Dialog";
+export { DialogParallel } from "./elements/DialogParallel";
 export { ErrorBoundary } from "./elements/ErrorBoundary";
 export { ErrorEmpty } from "./elements/ErrorEmpty";
 export { ErrorFetch } from "./elements/ErrorFetch";
@@ -14,10 +16,10 @@ export { Image, ImageCover } from "./elements/Image";
 export { Label } from "./elements/Label";
 export { Loading } from "./elements/Loading";
 export { LoadingWithOverlay } from "./elements/LoadingWithOverlay";
-export { Modal } from "./elements/Modal";
 export { Nl2br } from "./elements/Nl2br";
 export { Panel } from "./elements/Panel";
 export { AddIcon, CheckBold, EditIcon, NextJsIcon } from "./elements/SvgIcon";
+export { Tab } from "./elements/Tab";
 
 /* forms */
 export { FormWrapper } from "./forms/FormWrapper";
