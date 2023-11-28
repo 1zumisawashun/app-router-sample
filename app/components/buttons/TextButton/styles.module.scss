@@ -1,33 +1,13 @@
 @import "@/assets/styles/app.scss";
 
-$small: 0.875rem;
-$medium: 1rem;
-$large: 1.125rem;
-
 .text-button {
-  font-weight: 600;
-  transition: color 0.1s;
-
-  // text-button-size
-  &[data-size="small"] {
-    font-size: $small;
-  }
-  &[data-size="medium"] {
-    font-size: $medium;
-  }
-  &[data-size="large"] {
-    font-size: $large;
-  }
-
-  // text-button-color
   &[data-color="black"] {
-    color: #4b5563;
+    color: black;
   }
   &[data-color="grey"] {
-    color: #718096;
+    color: #6b7280;
   }
-
-  @include hoverAnime {
-    color: #ec4899;
+  &[data-color="blue"] {
+    color: blue;
   }
 }

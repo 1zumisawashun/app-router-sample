@@ -12,16 +12,15 @@ $small-pd-x: 18px;
 $medium-pd-x: 22px;
 $large-pd-x: 26px;
 
-.module {
+.button {
   font-weight: 700;
-  border-radius: 0.5em;
   box-sizing: border-box;
   line-height: 1;
   min-width: 100px;
   align-items: center;
   cursor: pointer;
   display: inline-flex;
-  gap: 8px;
+  gap: 0.5rem;
   justify-content: center;
   position: relative;
   text-align: center;
@@ -56,17 +55,38 @@ $large-pd-x: 26px;
   }
 
   // button-size
+  // FIXME:forで回して改修する
   &[data-size="small"] {
     font-size: $small;
     padding: $small-pd-y $small-pd-x;
+    > svg {
+      width: $small;
+      height: $small;
+    }
   }
   &[data-size="medium"] {
     font-size: $medium;
     padding: $medium-pd-y $medium-pd-x;
+    > svg {
+      width: $medium;
+      height: $medium;
+    }
   }
   &[data-size="large"] {
     font-size: $large;
     padding: $large-pd-y $large-pd-x;
+    > svg {
+      width: $large;
+      height: $large;
+    }
+  }
+
+  // button-shape
+  &[data-shape="square"] {
+    border-radius: 0.5em;
+  }
+  &[data-shape="round"] {
+    border-radius: 1.5em;
   }
 
   // button-variant-color

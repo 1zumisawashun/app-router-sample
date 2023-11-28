@@ -4,7 +4,8 @@ import { ComponentPropsWithoutRef, ReactNode } from "react";
 export type UnstyledButtonProps = {
   type?: "button" | "submit" | "reset";
   children: ReactNode;
-} & ComponentPropsWithoutRef<"button">;
+} & Omit<ComponentPropsWithoutRef<"button">, "color">;
+
 export type UnstyledButtonAnchorProps = {
   children: ReactNode;
   className?: string;
@@ -16,7 +17,7 @@ export const UnstyledButton = ({
   ...props
 }: UnstyledButtonProps) => {
   return (
-    <button {...props} type="button">
+    <button {...props} type={type}>
       {children}
     </button>
   );

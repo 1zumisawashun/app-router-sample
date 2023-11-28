@@ -1,6 +1,6 @@
 export type ThemeType = "primary" | "secondary" | "danger" | "success";
 
-export type VariantType = "contained" | "outlined";
+export type VariantType = "contained" | "outlined" | "transparent";
 
 export type SizeType = "small" | "medium" | "large";
 
@@ -9,6 +9,10 @@ export type PositionType = "start" | "center" | "end";
 export type StatusType = "loading" | "disabled" | "error";
 
 export type WidthType = "full" | "half" | "quarter" | "auto";
+
+export type ShapeType = "square" | "round";
+
+export type ColorType = "black" | "grey";
 
 export type SelectOption<T extends string = string> = {
   value: T;

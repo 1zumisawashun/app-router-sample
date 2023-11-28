@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { AnchorButton } from "./index";
+import { InputToggle } from "./index";
 
-const meta: Meta<typeof AnchorButton> = {
-  title: "AnchorButton",
-  component: AnchorButton,
+const meta: Meta<typeof InputToggle> = {
+  title: "InputToggle",
+  component: InputToggle,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -19,13 +19,8 @@ const meta: Meta<typeof AnchorButton> = {
 
 export default meta;
 
-type Story = StoryObj<typeof AnchorButton>;
+type Story = StoryObj<typeof InputToggle>;
 
 export const Primary: Story = {
-  args: {
-    variant: "contained",
-    theme: "primary",
-    href: "/",
-    children: "AnchorButton",
-  },
+  args: {},
 };

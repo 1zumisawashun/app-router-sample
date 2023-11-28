@@ -1,58 +1,46 @@
-import { SizeType } from "@/functions/types/Common";
-import Link, { LinkProps } from "next/link";
-import { ComponentPropsWithoutRef, ReactNode } from "react";
+import { ColorType } from "@/functions/types/Common";
+import {
+  AnchorButton,
+  AnchorButtonProps,
+  Button,
+  ButtonProps,
+} from "../Button";
 import styles from "./styles.module.scss";
 
-type BaseTextButtonProps = {
-  color?: "black" | "grey";
-  size?: SizeType;
-  children: ReactNode;
-  className?: string;
+type BaseType = {
+  color: ColorType;
 };
+export type TextButtonProps = {} & Omit<ButtonProps, "variant"> & BaseType;
 
-export type UnstyledButtonProps = {
-  type?: "button" | "submit" | "reset";
-} & ComponentPropsWithoutRef<"button"> &
-  BaseTextButtonProps;
+export type TextButtonAnchorProps = {} & Omit<AnchorButtonProps, "variant"> &
+  BaseType;
 
-export type UnstyledButtonAnchorProps = {} & LinkProps & BaseTextButtonProps;
-
-// NOTE:unstyled-buttonにhoverを装飾しただけ
-
-export const TextButton = ({
-  type = "button",
-  children,
-  color = "black",
-  size = "medium",
-  ...props
-}: UnstyledButtonProps) => {
+export const TextButton = ({ children, color, ...props }: TextButtonProps) => {
   return (
-    <button
+    <Button
       {...props}
-      type={type}
-      className={styles["text-button"]}
       data-color={color}
-      data-size={size}
+      variant="transparent"
+      className={styles["text-button"]}
     >
       {children}
-    </button>
+    </Button>
   );
 };
 
 export const TextButtonAnchor = ({
   children,
-  color = "black",
-  size = "medium",
+  color,
   ...props
-}: UnstyledButtonAnchorProps) => {
+}: TextButtonAnchorProps) => {
   return (
-    <Link
+    <AnchorButton
       {...props}
-      className={styles["text-button"]}
       data-color={color}
-      data-size={size}
+      variant="transparent"
+      className={styles["text-button"]}
     >
       {children}
-    </Link>
+    </AnchorButton>
   );
 };

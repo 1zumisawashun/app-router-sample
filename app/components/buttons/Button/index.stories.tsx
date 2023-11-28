@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
+import { AddIcon, EditIcon } from "../../elements/SvgIcon";
 import { Button } from "./index";
 
 const meta: Meta<typeof Button> = {
@@ -26,5 +27,23 @@ export const Primary: Story = {
     variant: "contained",
     theme: "primary",
     children: "Button",
+  },
+};
+
+export const PrimaryWithPrefix: Story = {
+  args: {
+    variant: "contained",
+    theme: "primary",
+    children: "Button",
+    prefix: <AddIcon />,
+  },
+};
+
+export const PrimaryWithSuffix: Story = {
+  args: {
+    variant: "contained",
+    theme: "primary",
+    children: "Button",
+    suffix: <EditIcon />,
   },
 };

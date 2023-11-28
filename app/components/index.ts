@@ -1,6 +1,6 @@
 /* buttons */
-export { AnchorButton } from "./buttons/AnchorButton";
-export { Button } from "./buttons/Button";
+
+export { AnchorButton, Button } from "./buttons/Button";
 export { TextButton, TextButtonAnchor } from "./buttons/TextButton";
 export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
 
@@ -25,12 +25,14 @@ export { Tab } from "./elements/Tab";
 export { FormWrapper } from "./forms/FormWrapper";
 export { InputCheckbox } from "./forms/InputCheckbox";
 export { InputCheckboxGroup } from "./forms/InputCheckboxGroup";
+export { InputFile } from "./forms/InputFile";
 export { InputLabel } from "./forms/InputLabel";
 export { InputRadio } from "./forms/InputRadio";
 export { InputRadioGroup } from "./forms/InputRadioGroup";
 export { InputSelect } from "./forms/InputSelect";
 export { InputText } from "./forms/InputText";
 export { InputTextarea } from "./forms/InputTextarea";
+export { InputToggle } from "./forms/InputToggle";
 export { InputWrapper } from "./forms/InputWrapper";
 
 /* layouts */

@@ -1,11 +1,10 @@
-import { CircularProgress } from "@/components";
+import { AddIcon, EditIcon } from "@/components";
 import {
   ShapeType,
   SizeType,
   ThemeType,
   VariantType,
 } from "@/functions/types/Common";
-import clsx from "clsx";
 import {
   UnstyledButton,
   UnstyledButtonAnchor,
@@ -15,80 +14,78 @@ import {
 import styles from "./styles.module.scss";
 
 type BaseProps = {
+  name?: "add" | "edit";
   size?: SizeType;
+  shape?: ShapeType;
   variant?: VariantType;
   theme?: ThemeType;
-  loading?: boolean;
-  shape?: ShapeType;
-  prefix?: any;
-  suffix?: any;
+  disabled?: boolean;
 };
 
-export type ButtonProps = {} & UnstyledButtonProps & BaseProps;
+export type IconButtonProps = {} & Omit<UnstyledButtonProps, "children"> &
+  BaseProps;
 
-export type AnchorButtonProps = {} & UnstyledButtonAnchorProps & BaseProps;
+export type IconButtonAnchorProps = {} & Omit<
+  UnstyledButtonAnchorProps,
+  "children"
+> &
+  BaseProps;
 
-export const Button = ({
+const Icons = {
+  add: AddIcon,
+  edit: EditIcon,
+};
+
+export const IconButton = ({
   type = "button",
-  children,
   theme = "primary",
   variant = "contained",
+  name = "edit",
   size = "medium",
-  shape = "square",
-  loading,
+  shape = "round",
   disabled,
-  className,
-  prefix,
-  suffix,
   ...props
-}: ButtonProps) => {
+}: IconButtonProps) => {
+  const Tag = Icons[`${name}`];
+
   return (
     <UnstyledButton
       {...props}
       type={type}
-      className={clsx(className, styles["button"])}
+      className={styles["icon-button"]}
       data-variant={variant}
       data-theme={theme}
       data-size={size}
       data-shape={shape}
       aria-disabled={disabled}
     >
-      {loading ? (
-        <CircularProgress {...{ size, theme, variant }} />
-      ) : (
-        <>
-          {prefix ?? null}
-          {children}
-          {suffix ?? null}
-        </>
-      )}
+      <Tag />
     </UnstyledButton>
   );
 };
 
-export const AnchorButton = ({
-  children,
+export const IconButtonAnchor = ({
   theme = "primary",
   variant = "contained",
+  name = "add",
   size = "medium",
-  shape = "square",
-  className,
-  prefix,
-  suffix,
+  shape = "round",
+  disabled,
   ...props
-}: AnchorButtonProps) => {
+}: IconButtonAnchorProps) => {
+  const Tag = Icons[`${name}`];
+
   return (
     <UnstyledButtonAnchor
       {...props}
-      className={clsx(className, styles["button"])}
+      className={styles["icon-button"]}
       data-variant={variant}
       data-theme={theme}
       data-size={size}
       data-shape={shape}
+      aria-disabled={disabled}
     >
-      {prefix ?? null}
-      {children}
-      {suffix ?? null}
+      <Tag />
     </UnstyledButtonAnchor>
   );
 };

@@ -1,12 +1,15 @@
 import { SVGProps } from "react";
 
-export const NextJsIcon = () => {
+export const NextJsIcon: React.FC<SVGProps<SVGSVGElement>> = (
+  props
+): JSX.Element => {
   return (
     <svg
       height="24"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 394 80"
+      {...props}
     >
       <path
         fill="#000"
@@ -20,7 +23,9 @@ export const NextJsIcon = () => {
   );
 };
 
-export const AddIcon = () => {
+export const AddIcon: React.FC<SVGProps<SVGSVGElement>> = (
+  props
+): JSX.Element => {
   return (
     <svg
       aria-hidden="true"
@@ -28,6 +33,7 @@ export const AddIcon = () => {
       fill="currentColor"
       viewBox="4 4 8 8"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <path
         fillRule="evenodd"
@@ -38,29 +44,36 @@ export const AddIcon = () => {
   );
 };
 
-export const EditIcon = () => {
+export const EditIcon: React.FC<SVGProps<SVGSVGElement>> = (
+  props
+): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className="w-5 h-5"
       viewBox="0 0 25 25"
       fill="currentColor"
+      {...props}
     >
       <path d="M7.127 22.562l-7.127 1.438 1.438-7.128 5.689 5.69zm1.414-1.414l11.228-11.225-5.69-5.692-11.227 11.227 5.689 5.69zm9.768-21.148l-2.816 2.817 5.691 5.691 2.816-2.819-5.691-5.689z" />
     </svg>
   );
 };
 
-export const CheckBold = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    role="img"
-    {...props}
-  >
-    <path d="M9.93 18.66c-.56 0-1.12-.19-1.58-.57l-4.8-3.93c-.64-.52-.74-1.47-.21-2.11.53-.64 1.47-.73 2.11-.21l4.45 3.64 9.04-9.04a1.49 1.49 0 0 1 2.12 0c.58.59.59 1.54 0 2.12l-9.36 9.36c-.49.49-1.12.74-1.77.74Z" />
-  </svg>
-);
+export const CheckBold: React.FC<SVGProps<SVGSVGElement>> = (
+  props
+): JSX.Element => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1em"
+      height="1em"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      role="img"
+      {...props}
+    >
+      <path d="M9.93 18.66c-.56 0-1.12-.19-1.58-.57l-4.8-3.93c-.64-.52-.74-1.47-.21-2.11.53-.64 1.47-.73 2.11-.21l4.45 3.64 9.04-9.04a1.49 1.49 0 0 1 2.12 0c.58.59.59 1.54 0 2.12l-9.36 9.36c-.49.49-1.12.74-1.77.74Z" />
+    </svg>
+  );
+};
