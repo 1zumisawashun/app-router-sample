@@ -1,4 +1,4 @@
-import { CheckBold } from "@/components";
+import { CheckIcon } from "@/components";
 import { ComponentPropsWithRef, forwardRef } from "react";
 import styles from "./styles.module.scss";
 
@@ -22,7 +22,7 @@ export const InputRadio = forwardRef<HTMLInputElement, InputFieldProps>(
           {...props}
         />
         <span className={styles[`${BLOCK_NAME}-icon`]}>
-          <CheckBold aria-hidden="true" />
+          <CheckIcon aria-hidden="true" />
         </span>
         {children && (
           <span className={styles[`${BLOCK_NAME}-text`]}>{children}</span>

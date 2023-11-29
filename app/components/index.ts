@@ -1,5 +1,4 @@
 /* buttons */
-
 export { AnchorButton, Button } from "./buttons/Button";
 export { TextButton, TextButtonAnchor } from "./buttons/TextButton";
 export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
@@ -18,8 +17,16 @@ export { Loading } from "./elements/Loading";
 export { LoadingWithOverlay } from "./elements/LoadingWithOverlay";
 export { Nl2br } from "./elements/Nl2br";
 export { Panel } from "./elements/Panel";
-export { AddIcon, CheckBold, EditIcon, NextJsIcon } from "./elements/SvgIcon";
+export {
+  AddIcon,
+  CheckIcon,
+  CrossIcon,
+  EditIcon,
+  NextJsIcon,
+} from "./elements/SvgIcon";
 export { Tab } from "./elements/Tab";
+export { Toast } from "./elements/Toast";
+export { Tooltip } from "./elements/Tooltip";
 
 /* forms */
 export { FormWrapper } from "./forms/FormWrapper";

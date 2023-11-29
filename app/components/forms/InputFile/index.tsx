@@ -1,6 +1,6 @@
 "use client";
-import { useDD } from "@/functions/hooks";
 import { BaseSyntheticEvent, useCallback, useId } from "react";
+import { useDD } from "../../../functions/hooks/useDD";
 import {
   InputWrapper,
   InputWrapperPropsPassThroughProps,

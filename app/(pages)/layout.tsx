@@ -1,6 +1,7 @@
 import "@/assets/styles/app.scss";
 import "@/assets/styles/globals.css";
 import { Header } from "@/components/layouts/Header";
+import { AppProvider } from "@/providers";
 import { Noto_Sans_JP } from "next/font/google";
 
 const NotoSansJP = Noto_Sans_JP({
@@ -25,10 +26,12 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={NotoSansJP.className}>
-        <Header />
-        <main>
-          <div className="container-sp _mb-2">{children}</div>
-        </main>
+        <AppProvider>
+          <Header />
+          <main>
+            <div className="container-sp _mb-2">{children}</div>
+          </main>
+        </AppProvider>
       </body>
     </html>
   );
