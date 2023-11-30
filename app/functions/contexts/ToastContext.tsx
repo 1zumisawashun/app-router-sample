@@ -1,17 +1,12 @@
 "use client";
+
 import { Toast } from "@/components";
-import { ThemeType } from "@/functions/types/Common";
+import { PositionOffset, ThemeType } from "@/functions/types/Common";
 import { createContext, useCallback, useEffect, useRef, useState } from "react";
 
 export type Toast = {
   message: string;
   theme: ThemeType;
-};
-
-type Position = "top" | "bottom" | "right" | "left";
-
-export type PositionOffset<P extends Position = Position> = {
-  [K in P]: number;
 };
 
 interface ToastContext {

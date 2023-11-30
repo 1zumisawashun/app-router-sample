@@ -1,0 +1,194 @@
+/*
+ * DropdownMenu
+ * NOTE: Styles can be overridden with "--DropdownMenu-*" variables
+*/
+
+.spui-DropdownMenu {
+  position: relative;
+  width: fit-content;
+}
+
+.spui-DropdownMenu-menu {
+  animation: 0.3s spui-DropdownMenu-fade-in;
+  background-color: grey;
+  border-radius: 12px;
+  box-shadow: 0px 11px 28px rgba(8, 18, 26, 0.12);
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 12px 0;
+  position: absolute;
+  width: 256px;
+  z-index: 1;
+  &[data-is-fade-out="true"] {
+    animation: 0.3s spui-DropdownMenu-fade-out;
+    opacity: 0;
+  }
+}
+
+.spui-DropdownMenu-menu--topLeft,
+.spui-DropdownMenu-menu--topCenter,
+.spui-DropdownMenu-menu--topRight {
+  margin-bottom: 8px;
+}
+
+.spui-DropdownMenu-menu--bottomLeft,
+.spui-DropdownMenu-menu--bottomCenter,
+.spui-DropdownMenu-menu--bottomRight {
+  margin-top: 8px;
+}
+
+.spui-DropdownMenu-menu--topLeft,
+.spui-DropdownMenu-menu--bottomLeft {
+  left: 0;
+}
+
+.spui-DropdownMenu-menu--topRight,
+.spui-DropdownMenu-menu--bottomRight {
+  right: 0;
+}
+
+.spui-DropdownMenu-menu--rightTop,
+.spui-DropdownMenu-menu--rightCenter,
+.spui-DropdownMenu-menu--rightBottom {
+  /* Menuの横幅256px + margin8px */
+  right: -264px;
+}
+
+.spui-DropdownMenu-menu--leftTop,
+.spui-DropdownMenu-menu--leftCenter,
+.spui-DropdownMenu-menu--leftBottom {
+  /* Menuの横幅256px + margin8px */
+  left: -264px;
+}
+
+.spui-DropdownMenu-menu--rightTop,
+.spui-DropdownMenu-menu--leftTop {
+  top: 0;
+}
+
+.spui-DropdownMenu-menu--rightBottom,
+.spui-DropdownMenu-menu--leftBottom {
+  bottom: 0;
+}
+
+.spui-DropdownMenu-menuButton {
+  align-items: center;
+  background-color: var(--color-surface-primary);
+  border: none;
+  display: flex;
+  font-size: 1em;
+  position: relative;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.spui-DropdownMenu-menu--text .spui-DropdownMenu-menuButton,
+.spui-DropdownMenu-menu--textWithIcon .spui-DropdownMenu-menuButton {
+  padding: 10px 16px;
+}
+
+.spui-DropdownMenu-menu--headWithIcon .spui-DropdownMenu-menuButton {
+  padding: 16px;
+}
+
+.spui-DropdownMenu-menu--headWithIconAndCaption .spui-DropdownMenu-menuButton {
+  padding: 14px 16px;
+}
+
+.spui-DropdownMenu-menuButton:hover {
+  background-color: var(--color-surface-secondary);
+}
+
+.spui-DropdownMenu-menuButton:focus-visible {
+  outline: 2px solid black;
+  z-index: 1;
+}
+
+.spui-DropdownMenu-menuItem .spui-DropdownMenu-menuButton::before {
+  background-color: var(--color-border-low-emphasis);
+  content: "";
+  height: 1px;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 32px);
+}
+
+.spui-DropdownMenu-menuItem:first-child .spui-DropdownMenu-menuButton::before {
+  height: 0;
+}
+
+.spui-DropdownMenu-iconContainer {
+  color: var(--color-object-high-emphasis);
+  display: flex;
+  font-size: 1.5em;
+  margin-right: 16px;
+}
+
+.spui-DropdownMenu-textContainer {
+  text-align: left;
+}
+
+.spui-DropdownMenu-title {
+  color: var(--color-text-high-emphasis);
+  font-size: 1em;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.spui-DropdownMenu-caption {
+  color: var(--color-text-low-emphasis);
+  font-size: 0.75em;
+  line-height: 1.4;
+  margin: 4px 0 0;
+}
+
+@keyframes spui-DropdownMenu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spui-DropdownMenu-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .spui-DropdownMenu-menu--rightTop,
+  .spui-DropdownMenu-menu--rightCenter,
+  .spui-DropdownMenu-menu--rightBottom {
+    bottom: auto;
+    left: 0;
+    margin-top: 8px;
+    top: auto !important;
+  }
+
+  .spui-DropdownMenu-menu--leftTop,
+  .spui-DropdownMenu-menu--leftCenter,
+  .spui-DropdownMenu-menu--leftBottom {
+    bottom: auto;
+    left: auto;
+    margin-top: 8px;
+    right: 0;
+    top: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spui-DropdownMenu-menu {
+    animation: 0s spui-DropdownMenu-fade-in;
+  }
+
+  /* stylelint-disable-next-line plugin/selector-bem-pattern */
+  .spui-DropdownMenu-menu.is-fade-out {
+    animation: 0s spui-DropdownMenu-fade-out;
+  }
+}

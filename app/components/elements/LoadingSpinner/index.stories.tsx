@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { LoadingWithOverlay } from "./index";
+import { LoadingSpinner } from "./index";
 
-const meta: Meta<typeof LoadingWithOverlay> = {
-  title: "LoadingWithOverlay",
-  component: LoadingWithOverlay,
+const meta: Meta<typeof LoadingSpinner> = {
+  title: "LoadingSpinner",
+  component: LoadingSpinner,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -19,7 +19,7 @@ const meta: Meta<typeof LoadingWithOverlay> = {
 
 export default meta;
 
-type Story = StoryObj<typeof LoadingWithOverlay>;
+type Story = StoryObj<typeof LoadingSpinner>;
 
 export const Primary: Story = {
   args: {},

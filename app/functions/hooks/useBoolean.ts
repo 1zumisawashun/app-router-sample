@@ -1,3 +1,5 @@
+"use client";
+
 import { breakpoints } from "@/functions/constants/breakpoints";
 import { useMemo } from "react";
 

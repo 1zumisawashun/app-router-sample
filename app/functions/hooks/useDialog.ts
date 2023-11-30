@@ -1,3 +1,5 @@
+"use client";
+
 import { Ref, useCallback, useRef } from "react";
 
 export type UseDialog = {

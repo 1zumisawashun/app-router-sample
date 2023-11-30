@@ -8,8 +8,9 @@ import {
 import styles from "./styles.module.scss";
 
 type BaseType = {
-  color: ColorType;
+  color?: ColorType;
 };
+
 export type TextButtonProps = {} & Omit<ButtonProps, "variant"> & BaseType;
 
 export type TextButtonAnchorProps = {} & Omit<AnchorButtonProps, "variant"> &

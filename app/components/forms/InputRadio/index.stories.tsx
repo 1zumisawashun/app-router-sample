@@ -24,5 +24,14 @@ type Story = StoryObj<typeof InputRadio>;
 export const Primary: Story = {
   args: {
     children: "InputRadio",
+    disabled: false,
+  },
+};
+
+export const PrimaryWithCard: Story = {
+  args: {
+    children: "InputRadio",
+    disabled: false,
+    variant: "card",
   },
 };

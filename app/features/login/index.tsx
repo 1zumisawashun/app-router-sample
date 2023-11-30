@@ -1,10 +1,17 @@
 "use client";
-import { Button, FlexWrapper, FormWrapper, InputText } from "@/components";
+import {
+  Button,
+  FlexWrapper,
+  FormWrapper,
+  InputFile,
+  InputText,
+} from "@/components";
 import { useState } from "react";
 
 export const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [file, setFile] = useState<File | undefined>();
 
   return (
     <FormWrapper>
@@ -18,6 +25,7 @@ export const Login: React.FC = () => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       ></InputText>
+      <InputFile file={file} setFile={setFile}></InputFile>
       <FlexWrapper position="center">
         <Button onClick={() => null}>Login</Button>
       </FlexWrapper>

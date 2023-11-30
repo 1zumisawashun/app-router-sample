@@ -1,5 +1,6 @@
 "use client";
-import { BaseSyntheticEvent, useCallback, useId } from "react";
+
+import { BaseSyntheticEvent, useId, useRef } from "react";
 import { useDD } from "../../../functions/hooks/useDD";
 import {
   InputWrapper,
@@ -25,19 +26,18 @@ export const InputFile: React.FC<FileUploadInputProps> = ({
   disabled,
   width,
 }) => {
+  const dragRef = useRef<HTMLLabelElement | null>(null);
+
   const handleUpload = (e: BaseSyntheticEvent) => {
     const file = e.target.files[0];
-    update(file);
+    setFile(file);
   };
 
-  const update = useCallback(
-    (file: File | undefined): void => {
-      setFile(file);
-    },
-    [setFile]
-  );
+  useDD(dragRef, (e) => {
+    const file = e.dataTransfer?.files[0];
+    setFile(file);
+  });
 
-  const { dragRef } = useDD({ update });
   const id = useId();
 
   const BLOCK_NAME = "drag-and-drop";

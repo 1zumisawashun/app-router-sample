@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { InputCheckboxGroup } from "./index";
+import { LoadingDot } from "./index";
 
-const meta: Meta<typeof InputCheckboxGroup> = {
-  title: "InputCheckboxGroup",
-  component: InputCheckboxGroup,
+const meta: Meta<typeof LoadingDot> = {
+  title: "LoadingDot",
+  component: LoadingDot,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -19,14 +19,8 @@ const meta: Meta<typeof InputCheckboxGroup> = {
 
 export default meta;
 
-type Story = StoryObj<typeof InputCheckboxGroup>;
+type Story = StoryObj<typeof LoadingDot>;
 
 export const Primary: Story = {
-  args: {
-    options: [
-      { label: "InputCheckboxGroup1", value: "InputCheckboxGroup1" },
-      { label: "InputCheckboxGroup2", value: "InputCheckboxGroup2" },
-      { label: "InputCheckboxGroup3", value: "InputCheckboxGroup3" },
-    ],
-  },
+  args: {},
 };

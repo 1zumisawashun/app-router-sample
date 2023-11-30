@@ -1,53 +1,20 @@
+@import "@/assets/styles/app.scss";
+
 .input-checkbox-label {
-  align-items: center;
-  border-radius: 2px;
-  color: black;
-  display: inline-flex;
-  font-size: 1em;
-  font-weight: bold;
-  line-height: 1;
+  composes: input-choice-label;
+}
+
+.input-checkbox-input {
+  composes: input-choice-input;
 }
 
 .input-checkbox-icon {
-  align-items: center;
-  border: solid 1px black;
+  composes: input-choice-icon;
   border-radius: 4px;
-  box-sizing: border-box;
-  color: transparent;
-  display: inline-flex;
-  font-size: 0.875em;
   height: 18px;
-  justify-content: center;
   width: 18px;
 }
 
-// NOTE:「+」を使うことでpropsをinputに集約することができる
-.input-checkbox-input:checked + .input-checkbox-icon {
-  background-color: transparent;
-  border: solid 1px green;
-  color: green;
-}
-
-.input-checkbox-input[data-error="true"] + .input-checkbox-icon {
-  background-color: transparent;
-  border: solid 1px red;
-  color: red;
-}
-
-.input-checkbox-input:disabled + .input-checkbox-icon {
-  opacity: 0.3;
-}
-
-// NOTE:childrenが存在すればmarginを当てる
-.input-checkbox-text:not(:empty) {
-  margin-left: 8px;
-}
-
-// NOTE:これは存在するorしないが確定していないから「~」を指定している?
-.input-checkbox-input:checked ~ .input-checkbox-text {
-  color: black;
-}
-
-.input-checkbox-input:disabled ~ .input-checkbox-text {
-  color: black;
+.input-checkbox-text {
+  composes: input-choice-text;
 }

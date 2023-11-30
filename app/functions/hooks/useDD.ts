@@ -1,15 +1,11 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { RefObject, useCallback, useEffect } from "react";
 
-type UseDD = {
-  update: (file: File | undefined) => void;
-};
-
-export const useDD = ({ update }: UseDD) => {
-  const dragRef = useRef<HTMLLabelElement | null>(null);
-  const [isDragging, setIsDragging] = useState<boolean>(false);
-
+export const useDD = (
+  dragRef: RefObject<HTMLElement>,
+  cb: (e: DragEvent) => void
+) => {
   const handleDragIn = useCallback((e: DragEvent): void => {
     e.preventDefault();
     e.stopPropagation();
@@ -18,17 +14,11 @@ export const useDD = ({ update }: UseDD) => {
   const handleDragOut = useCallback((e: DragEvent): void => {
     e.preventDefault();
     e.stopPropagation();
-
-    setIsDragging(false);
   }, []);
 
   const handleDragOver = useCallback((e: DragEvent): void => {
     e.preventDefault();
     e.stopPropagation();
-
-    if (e.dataTransfer?.files) {
-      setIsDragging(true);
-    }
   }, []);
 
   const handleDrop = useCallback(
@@ -36,14 +26,9 @@ export const useDD = ({ update }: UseDD) => {
       e.preventDefault();
       e.stopPropagation();
 
-      if (e.dataTransfer) {
-        const file = e.dataTransfer.files[0];
-        update(file);
-      }
-
-      setIsDragging(false);
+      cb(e);
     },
-    [update]
+    [cb]
   );
 
   const initDragEvents = useCallback((): void => {
@@ -53,7 +38,7 @@ export const useDD = ({ update }: UseDD) => {
       dragRef.current.addEventListener("dragover", handleDragOver);
       dragRef.current.addEventListener("drop", handleDrop);
     }
-  }, [handleDragIn, handleDragOut, handleDragOver, handleDrop]);
+  }, [handleDragIn, handleDragOut, handleDragOver, handleDrop, dragRef]);
 
   const resetDragEvents = useCallback((): void => {
     if (dragRef.current !== null) {
@@ -62,13 +47,11 @@ export const useDD = ({ update }: UseDD) => {
       dragRef.current.removeEventListener("dragover", handleDragOver);
       dragRef.current.removeEventListener("drop", handleDrop);
     }
-  }, [handleDragIn, handleDragOut, handleDragOver, handleDrop]);
+  }, [handleDragIn, handleDragOut, handleDragOver, handleDrop, dragRef]);
 
   useEffect(() => {
     initDragEvents();
 
     return () => resetDragEvents();
   }, [initDragEvents, resetDragEvents]);
-
-  return { dragRef, isDragging };
 };

@@ -1,5 +1,19 @@
 @import "@/assets/styles/app.scss";
 
+.header-wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 1536px;
+}
+
+.header {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .link-logo-wrapper {
   display: inline-flex;
   align-items: center;
@@ -7,16 +21,6 @@
   font-size: 1.25rem;
   font-weight: 700;
   gap: 0.75rem;
-}
-
-.link-item {
-  color: #4b5563;
-  font-size: 1.125rem;
-  font-weight: 600;
-  transition: color 0.1s;
-  @include hoverAnime {
-    color: #ec4899;
-  }
 }
 
 .version-item {
@@ -29,7 +33,4 @@
   outline: none;
   transition: color 0.1s;
   padding: 0.75rem 1rem;
-  @include hoverAnime {
-    color: #ec4899;
-  }
 }

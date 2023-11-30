@@ -10,4 +10,12 @@
   &[data-position="end"] {
     justify-content: end;
   }
+
+  // flex-wrapper-cirection
+  &[data-direction="row"] {
+    flex-direction: row;
+  }
+  &[data-direction="column"] {
+    flex-direction: column;
+  }
 }

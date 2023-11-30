@@ -24,5 +24,14 @@ type Story = StoryObj<typeof InputCheckbox>;
 export const Primary: Story = {
   args: {
     children: "InputCheckbox",
+    disabled: false,
+  },
+};
+
+export const PrimaryWithCard: Story = {
+  args: {
+    children: "InputCheckbox",
+    disabled: false,
+    variant: "card",
   },
 };

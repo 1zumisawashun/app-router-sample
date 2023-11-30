@@ -1,27 +1,8 @@
 "use client";
+import { PositionOffset } from "@/functions/types/Common";
 import clsx from "clsx";
-import {
-  PositionOffset,
-  Toast as ToastType,
-} from "../../../functions/contexts/ToastContext";
+import { Toast as ToastType } from "../../../functions/contexts/ToastContext";
 import styles from "./styles.module.scss";
-
-// type Position = keyof Pick<ManagedStack, "topCenter" | "bottomCenter">;
-
-type Variant = "information" | "confirmation" | "error";
-
-// type Props = StackNotificationComponentProps<
-//   {
-//     children?: React.ReactNode;
-//     active?: boolean;
-//     // milliseconds to hide
-//     duration?: number;
-//     onHide?: () => void;
-//     icon?: React.ReactNode;
-//     variant?: Variant;
-//   },
-//   Position
-// >;
 
 type ToastProps = {
   isShow: Boolean;
