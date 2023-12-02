@@ -1,7 +1,7 @@
 import "@/assets/styles/app.scss";
-import "@/assets/styles/globals.css";
 import { Header } from "@/components/layouts/Header";
 import { AppProvider } from "@/providers";
+import "@unocss/reset/tailwind.css";
 import { Noto_Sans_JP } from "next/font/google";
 
 const NotoSansJP = Noto_Sans_JP({

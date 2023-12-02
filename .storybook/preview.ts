@@ -1,6 +1,6 @@
 import "@/assets/styles/app.scss";
-import "@/assets/styles/globals.css";
 import type { Preview } from "@storybook/react";
+import "@unocss/reset/tailwind.css";
 
 const preview: Preview = {
   parameters: {
