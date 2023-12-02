@@ -1,4 +1,4 @@
-import { ErrorBoundary, ErrorFetch, Loading } from "@/components";
+import { ErrorBoundary, ErrorFetch, LoadingDot } from "@/components";
 import { apiUrl } from "@/functions/constants/api";
 import { zNotes } from "@/functions/models/Notes";
 import { SearchParams } from "@/functions/types/Common";
@@ -13,7 +13,7 @@ export const NoteList = async ({ category }: SearchParams) => {
 
   return (
     <ErrorBoundary fallback={<ErrorFetch />}>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<LoadingDot />}>
         <NoteLists initialState={notes} />
       </Suspense>
     </ErrorBoundary>

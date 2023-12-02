@@ -33,7 +33,7 @@ export const ProfileMenu = () => {
       <DropdownMenu.List
         onClose={onClose}
         open={open}
-        position="bottomCenter"
+        position="bottomRight"
         triggerRef={triggerRef}
       >
         <FlexWrapper direction="column">

@@ -3,6 +3,7 @@ import { StackPosition } from "@/functions/types/Common";
 import clsx from "clsx";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { useOuterClick } from "../../../functions/hooks/useOuterClick";
+import { getOffset } from "./getOffset";
 import styles from "./styles.module.scss";
 
 type ListProps = {
@@ -14,12 +15,13 @@ type ListProps = {
   children: React.ReactNode;
 };
 
-export const BLOCK_NAME = "spui-DropdownMenu";
-const FADE_IN_ANIMATION = "spui-DropdownMenu-fade-in";
+export const BLOCK_NAME = "dropdown-menu";
 
-const MENU_WIDTH = 256;
+const FADE_IN_ANIMATION = "fade-in";
 
-const menuElStyle = styles[`${BLOCK_NAME}-menu`];
+type Rect = { width: number; height: number };
+
+const initRect = { width: 0, height: 0 };
 
 const List = ({
   children,
@@ -29,14 +31,14 @@ const List = ({
   position = "bottomCenter",
   triggerRef,
 }: ListProps) => {
-  const menuEl = useRef<HTMLUListElement>(null);
+  const targetRef = useRef<HTMLUListElement>(null);
 
   const [fadeOut, setFadeOut] = useState(false);
-  const [triggerHeight, setTriggerHeight] = useState(0);
-  const [triggerWidth, setTriggerWidth] = useState(0);
-  const [menuHeight, setMenuHeight] = useState(0);
 
-  useOuterClick([menuEl, triggerRef], () => {
+  const [triggerRect, setTriggerRect] = useState<Rect>(initRect);
+  const [targetRect, setTargetRect] = useState<Rect>(initRect);
+
+  useOuterClick([targetRef, triggerRef], () => {
     if (!open) return;
     setFadeOut(true);
   });
@@ -56,69 +58,44 @@ const List = ({
   );
 
   useEffect(() => {
-    const menu = menuEl.current;
-    menu?.addEventListener("animationend", handleAnimationEnd, false);
+    const target = targetRef.current;
+    target?.addEventListener("animationend", handleAnimationEnd, false);
 
     return () =>
-      menu?.removeEventListener("animationend", handleAnimationEnd, false);
-  }, [menuEl, handleAnimationEnd]);
+      target?.removeEventListener("animationend", handleAnimationEnd, false);
+  }, [targetRef, handleAnimationEnd]);
 
   // Triggerの縦横幅を取得
   useEffect(() => {
     if (!triggerRef.current) return;
 
     const { height, width } = triggerRef.current.getBoundingClientRect();
-    setTriggerHeight(height);
-    setTriggerWidth(width);
+    setTriggerRect({ height, width });
   }, [triggerRef]);
 
-  // Menuの縦幅を取得
+  // Targetの縦幅を取得
   useEffect(() => {
     if (!open) return;
-    if (!menuEl.current) return;
+    if (!targetRef.current) return;
 
-    const { height } = menuEl.current.getBoundingClientRect();
-    setMenuHeight(height);
+    const { height, width } = targetRef.current.getBoundingClientRect();
+    setTargetRect({ height, width });
   }, [open]);
 
-  if (!open) return <></>;
-
-  let top = "70px";
-  // let bottom;
-  let left;
-  // let right = "10px";
-
-  console.log(triggerHeight, "triggerHeight");
-  console.log(triggerWidth, "triggerWidth");
-  // console.log(menuHeight, "menuHeight");
-
-  // if (["topLeft", "topCenter", "topRight"].includes(position)) {
-  //   bottom = `${triggerHeight}px`;
-  // }
-  if (["topCenter", "bottomCenter"].includes(position)) {
-    left = `-${(MENU_WIDTH - triggerWidth) / 2}px`;
-  }
-  // if (["rightCenter", "leftCenter"].includes(position)) {
-  //   top = `-${(menuHeight - triggerHeight) / 2}px`;
-  // }
-  if (["bottomLeft", "bottomCenter", "bottomRight"].includes(position)) {
-    top = `${triggerHeight}px`;
-  }
-
-  console.log(triggerHeight, "triggerHeight");
-  console.log(triggerWidth, "triggerWidth");
-  console.log(top, "top");
-  console.log(left, "left");
+  if (!open) return null;
 
   return (
     <ul
       id={id}
       onClick={handleInnerClick}
-      className={clsx(menuElStyle, styles[`${BLOCK_NAME}-menu--${position}`])}
+      className={clsx(
+        styles[`${BLOCK_NAME}`],
+        styles[`${BLOCK_NAME}-${position}`]
+      )}
       data-is-fade-out={fadeOut}
-      ref={menuEl}
+      ref={targetRef}
       role="menu"
-      style={{ left, top }}
+      style={getOffset({ triggerRect, targetRect, position })}
     >
       {children}
     </ul>
@@ -126,7 +103,7 @@ const List = ({
 };
 
 const Frame = ({ children }: { children: React.ReactNode }) => {
-  return <div className={styles[`${BLOCK_NAME}`]}>{children}</div>;
+  return <div className={styles[`${BLOCK_NAME}-flame`]}>{children}</div>;
 };
 
 export const DropdownMenu = {

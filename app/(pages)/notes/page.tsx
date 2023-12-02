@@ -29,7 +29,6 @@ export default async function Page({
         <span className={styles["icon-wrapper"]}>
           <AddIcon />
         </span>
-        <span className="sr-only">New Note</span>
       </UnstyledButtonAnchor>
 
       <SubHeader title="List Notes">
