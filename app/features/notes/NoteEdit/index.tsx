@@ -4,7 +4,7 @@ import {
   Button,
   FlexWrapper,
   FormWrapper,
-  InputCheckbox,
+  // InputCheckbox,
   InputText,
   InputTextarea,
 } from "@/components";
@@ -85,7 +85,7 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
           onChange={(e) => setTitle(e.target.value)}
         ></InputText>
 
-        {categoryOptions.map((category) => (
+        {/* {categoryOptions.map((category) => (
           <InputCheckbox
             key={category.value}
             value={category.value}
@@ -93,7 +93,7 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
           >
             {category.label}
           </InputCheckbox>
-        ))}
+        ))} */}
 
         <Button
           onClick={() => showToast({ message: "test", theme: "success" })}

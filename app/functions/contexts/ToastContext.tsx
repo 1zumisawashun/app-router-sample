@@ -20,7 +20,10 @@ export const ToastContext = createContext<ToastContext>({
 });
 
 export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
-  const [toast, setToast] = useState<Toast>({ message: "", theme: "success" });
+  const [toast, setToast] = useState<Toast>({
+    message: "",
+    theme: "success",
+  });
   const [isShow, setIsShow] = useState<boolean>(false);
 
   const timer = useRef<ReturnType<typeof setTimeout>>();

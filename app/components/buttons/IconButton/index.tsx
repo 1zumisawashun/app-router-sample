@@ -1,4 +1,4 @@
-import { AddIcon, EditIcon } from "@/components";
+import { AddIcon, CrossIcon, EditIcon } from "@/components";
 import {
   ShapeType,
   SizeType,
@@ -14,7 +14,7 @@ import {
 import styles from "./styles.module.scss";
 
 type BaseProps = {
-  name?: "add" | "edit";
+  name?: "add" | "edit" | "cross";
   size?: SizeType;
   shape?: ShapeType;
   variant?: VariantType;
@@ -34,6 +34,7 @@ export type IconButtonAnchorProps = {} & Omit<
 const Icons = {
   add: AddIcon,
   edit: EditIcon,
+  cross: CrossIcon,
 };
 
 export const IconButton = ({
