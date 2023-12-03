@@ -1,5 +1,6 @@
-import { AddIcon, UnstyledButtonAnchor } from "@/components";
-import { SubHeader } from "@/components/layouts";
+import { UnstyledButtonAnchor } from "@/components/buttons/UnstyledButton";
+import { AddIcon } from "@/components/elements/SvgIcon";
+import { SubHeader } from "@/components/layouts/SubHeader";
 import { NoteList } from "@/features/notes/NoteList";
 import { SearchParams } from "@/functions/types/Common";
 import "server-only";

@@ -27,7 +27,7 @@ export const InputRadioGroup = forwardRef<HTMLInputElement, InputFieldProps>(
       width,
       ...props
     },
-    ref
+    // ref
   ) => {
     const id = useId();
     return (

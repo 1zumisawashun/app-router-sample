@@ -1,4 +1,4 @@
-import { Nl2br } from "@/components";
+import { Nl2br } from "@/components/elements/Nl2br";
 import { prisma } from "@/functions/libs/prisma";
 import styles from "./styles.module.scss";
 

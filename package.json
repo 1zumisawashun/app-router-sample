@@ -19,9 +19,11 @@
     "prisma:push": "npx prisma db push",
     "prisma:reset": "npx prisma db push --force-reset && npm run prisma:seed",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.0.3",
     "@prisma/client": "^5.5.2",
     "@unocss/reset": "^0.57.7",
     "clsx": "^2.0.0",

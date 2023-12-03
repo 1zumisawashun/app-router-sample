@@ -34,7 +34,7 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
 
   useEffect(() => {
     return () => closeToast();
-  }, []);
+  }, [closeToast]);
 
   const [title, setTitle] = useState(item.title);
   const [categories, setCategories] = useState(
@@ -43,15 +43,16 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
   const [body, setBody] = useState(item.body);
 
   const { data } = useSWR("/api/categories", fetcher);
+  console.log(data);
 
-  const categoryOptions = data
-    ? data.map((category) => {
-        return {
-          label: category.name,
-          value: category.id,
-        };
-      })
-    : [];
+  // const categoryOptions = data
+  //   ? data.map((category) => {
+  //       return {
+  //         label: category.name,
+  //         value: category.id,
+  //       };
+  //     })
+  //   : [];
 
   const updateNote = useCallback(async () => {
     const res = await fetch(`/api/notes/${item.id}`, {
@@ -71,10 +72,10 @@ export const NoteEdit: React.FC<Props> = ({ item }) => {
     }
   }, [body, item.id, router, title, categories]);
 
-  const handleCategories = (e: any) => {
-    const val = e.target.value;
-    console.log(val);
-  };
+  // const handleCategories = (e: any) => {
+  //   const val = e.target.value;
+  //   console.log(val);
+  // };
 
   return (
     <>

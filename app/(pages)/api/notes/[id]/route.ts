@@ -41,10 +41,17 @@ export async function PUT(
   return new NextResponse(null, { status: 204 });
 }
 
-export async function DELETE({ params }: { params: { id: string } }) {
-  await prisma.note.delete({
-    where: { id: Number(params.id) },
-  });
+// export async function DELETE({
+//   _req,
+//   params,
+// }: {
+//   _req: NextRequest;
+//   params: { id: string };
+// }) {
+//   const res = await prisma.note.delete({
+//     where: { id: Number(params.id) },
+//   });
+//   console.log(res, _req);
 
-  return new NextResponse(null, { status: 204 });
-}
+//   return new NextResponse(null, { status: 204 });
+// }

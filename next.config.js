@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
+
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
 const nextConfig = {
+  modularizeImports: {},
+  experimental: {
+    optimizePackageImports: ["app/components", "components"],
+  },
   images: {
     remotePatterns: [
       {
@@ -12,4 +21,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

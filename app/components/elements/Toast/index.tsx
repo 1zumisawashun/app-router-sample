@@ -23,7 +23,7 @@ export const Toast: React.FC<ToastProps> = ({
   isShow,
   toast: { message = "これはテストこれはテスト", theme = "success" },
   position = "topCenter",
-  closeToast,
+  // closeToast,
   focusEvent: { resetTimeout, setIsShowWithTimeout },
 }) => {
   const [clientHeight, setClientHeight] = useState(0);

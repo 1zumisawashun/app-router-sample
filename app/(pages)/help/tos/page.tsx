@@ -1,4 +1,7 @@
-import { ErrorBoundary, ErrorFetch, LoadingDot } from "@/components";
+import { ErrorBoundary } from "@/components/elements/ErrorBoundary";
+import { ErrorFetch } from "@/components/elements/ErrorFetch";
+import { LoadingDot } from "@/components/elements/LoadingDot";
+
 import Tos from "@/features/tos";
 import { Suspense } from "react";
 

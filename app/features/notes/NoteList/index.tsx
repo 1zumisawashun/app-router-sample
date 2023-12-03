@@ -1,4 +1,6 @@
-import { ErrorBoundary, ErrorFetch, LoadingDot } from "@/components";
+import { ErrorBoundary } from "@/components/elements/ErrorBoundary";
+import { ErrorFetch } from "@/components/elements/ErrorFetch";
+import { LoadingDot } from "@/components/elements/LoadingDot";
 import { apiUrl } from "@/functions/constants/api";
 import { zNotes } from "@/functions/models/Notes";
 import { SearchParams } from "@/functions/types/Common";
