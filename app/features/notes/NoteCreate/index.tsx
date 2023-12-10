@@ -1,12 +1,11 @@
 "use client";
 import {
-  AnchorButton,
-  Button,
   FlexWrapper,
   FormWrapper,
   InputText,
   InputTextarea,
 } from "@/components";
+import { AnchorButton, Button } from "@/components/buttons";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 import { z } from "zod";

@@ -1,4 +1,5 @@
-import { EditIcon, UnstyledButtonAnchor } from "@/components";
+import { EditIcon } from "@/components";
+import { UnstyledButtonAnchor } from "@/components/buttons";
 import { Note } from "@/functions/models/Notes";
 import styles from "./styles.module.scss";
 

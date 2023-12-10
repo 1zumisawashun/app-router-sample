@@ -5,10 +5,12 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
-  modularizeImports: {},
-  experimental: {
-    optimizePackageImports: ["app/components", "components"],
-  },
+  // modularizeImports: {
+  //   "./app/components/buttons/index.ts": {
+  //     transform: "./app/components/buttons/{{member}}",
+  //     skipDefaultConversion: true,
+  //   },
+  // },
   images: {
     remotePatterns: [
       {
@@ -21,4 +23,14 @@ const nextConfig = {
   },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = {
+  webpack(c) {
+    c.module.rules.push({
+      test: [/app\/components\/index.ts/i],
+      sideEffects: false,
+    });
+
+    return c;
+  },
+  ...withBundleAnalyzer(nextConfig),
+};

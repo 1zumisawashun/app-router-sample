@@ -1,4 +1,4 @@
-import { TextButtonAnchor } from "@/components";
+import { TextButtonAnchor } from "@/components/buttons";
 import "server-only";
 
 type SubHeaderProps = {

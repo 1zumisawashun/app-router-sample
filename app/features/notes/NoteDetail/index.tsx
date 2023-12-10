@@ -1,13 +1,11 @@
 "use client";
+import { Dialog, FlexWrapper, Label } from "@/components";
 import {
   AnchorButton,
   Button,
-  Dialog,
-  FlexWrapper,
-  Label,
   UnstyledButtonAnchor,
-} from "@/components";
-import { useDialog } from "@/functions/hooks";
+} from "@/components/buttons";
+import { useDialog } from "@/functions/hooks/useDialog";
 import { Note } from "@/functions/models/Notes";
 import { useRouter } from "next/navigation";
 import { useCallback } from "react";

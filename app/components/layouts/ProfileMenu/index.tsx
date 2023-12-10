@@ -1,10 +1,6 @@
 "use client";
-import {
-  Avatar,
-  DropdownMenu,
-  FlexWrapper,
-  TextButtonAnchor,
-} from "@/components";
+import { Avatar, DropdownMenu, FlexWrapper } from "@/components";
+import { TextButtonAnchor } from "@/components/buttons";
 import { useRef, useState } from "react";
 import cover from "../../../assets/images/image-cover.jpg";
 

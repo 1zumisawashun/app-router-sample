@@ -1,8 +1,8 @@
 "use client";
+import { useOuterClick } from "@/functions/hooks/useOuterClick";
 import { StackPosition } from "@/functions/types/Common";
 import clsx from "clsx";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { useOuterClick } from "../../../functions/hooks/useOuterClick";
 import { getOffset } from "./getOffset";
 import styles from "./styles.module.scss";
 

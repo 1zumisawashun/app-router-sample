@@ -5,7 +5,9 @@ import {
   ThemeType,
   VariantType,
 } from "@/functions/types/Common";
-import UnstyledButton, { UnstyledButtonProps } from "../UnstyledButton";
+import UnstyledButtonAnchor, {
+  UnstyledButtonAnchorProps,
+} from "../UnstyledButtonAnchor";
 import styles from "./styles.module.scss";
 
 type BaseProps = {
@@ -17,7 +19,10 @@ type BaseProps = {
   disabled?: boolean;
 };
 
-export type IconButtonProps = {} & Omit<UnstyledButtonProps, "children"> &
+export type IconButtonAnchorProps = {} & Omit<
+  UnstyledButtonAnchorProps,
+  "children"
+> &
   BaseProps;
 
 const Icons = {
@@ -26,22 +31,20 @@ const Icons = {
   cross: CrossIcon,
 };
 
-export default function IconButton({
-  type = "button",
+export default function IconButtonAnchor({
   theme = "primary",
   variant = "contained",
-  name = "edit",
+  name = "add",
   size = "medium",
   shape = "round",
   disabled,
   ...props
-}: IconButtonProps) {
+}: IconButtonAnchorProps) {
   const Tag = Icons[`${name}`];
 
   return (
-    <UnstyledButton
+    <UnstyledButtonAnchor
       {...props}
-      type={type}
       className={styles["icon-button"]}
       data-variant={variant}
       data-theme={theme}
@@ -50,6 +53,6 @@ export default function IconButton({
       aria-disabled={disabled}
     >
       <Tag />
-    </UnstyledButton>
+    </UnstyledButtonAnchor>
   );
 }

@@ -1,9 +1,5 @@
-import {
-  FlexWrapper,
-  LoadingDot,
-  NextJsIcon,
-  UnstyledButtonAnchor,
-} from "@/components";
+import { FlexWrapper, LoadingDot, NextJsIcon } from "@/components";
+import { UnstyledButtonAnchor } from "@/components/buttons";
 import { ProfileMenu } from "@/components/layouts/ProfileMenu";
 import { prisma } from "@/functions/libs/prisma";
 import { zVersion } from "@/functions/models/Settings";

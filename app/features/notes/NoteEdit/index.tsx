@@ -1,14 +1,13 @@
 "use client";
 import {
-  AnchorButton,
-  Button,
   FlexWrapper,
   FormWrapper,
   // InputCheckbox,
   InputText,
   InputTextarea,
 } from "@/components";
-import { useToast } from "@/functions/hooks";
+import { AnchorButton, Button } from "@/components/buttons";
+import { useToast } from "@/functions/hooks/useToast";
 import { zCategories } from "@/functions/models/Categories";
 import { Note } from "@/functions/models/Notes";
 import { useRouter } from "next/navigation";

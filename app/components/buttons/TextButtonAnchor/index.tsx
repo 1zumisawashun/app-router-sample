@@ -1,26 +1,27 @@
 import { ColorType } from "@/functions/types/Common";
-import Button, { ButtonProps } from "../Button";
+import AnchorButton, { AnchorButtonProps } from "../AnchorButton";
 import styles from "./styles.module.scss";
 
 type BaseType = {
   color?: ColorType;
 };
 
-export type TextButtonProps = {} & Omit<ButtonProps, "variant"> & BaseType;
+export type TextButtonAnchorProps = {} & Omit<AnchorButtonProps, "variant"> &
+  BaseType;
 
-export default function TextButton({
+export default function TextButtonAnchor({
   children,
   color,
   ...props
-}: TextButtonProps) {
+}: TextButtonAnchorProps) {
   return (
-    <Button
+    <AnchorButton
       {...props}
       data-color={color}
       variant="transparent"
       className={styles["text-button"]}
     >
       {children}
-    </Button>
+    </AnchorButton>
   );
 }

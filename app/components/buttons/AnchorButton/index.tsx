@@ -1,4 +1,3 @@
-import { CircularProgress } from "@/components";
 import {
   ShapeType,
   SizeType,
@@ -6,7 +5,9 @@ import {
   VariantType,
 } from "@/functions/types/Common";
 import clsx from "clsx";
-import UnstyledButton, { UnstyledButtonProps } from "../UnstyledButton";
+import UnstyledButtonAnchor, {
+  UnstyledButtonAnchorProps,
+} from "../UnstyledButtonAnchor";
 import styles from "./styles.module.scss";
 
 type BaseProps = {
@@ -19,42 +20,31 @@ type BaseProps = {
   suffix?: any;
 };
 
-export type ButtonProps = {} & UnstyledButtonProps & BaseProps;
+export type AnchorButtonProps = {} & UnstyledButtonAnchorProps & BaseProps;
 
-export default function Button({
-  type = "button",
+export default function AnchorButton({
   children,
   theme = "primary",
   variant = "contained",
   size = "medium",
   shape = "square",
-  loading,
-  disabled,
   className,
   prefix,
   suffix,
   ...props
-}: ButtonProps) {
+}: AnchorButtonProps) {
   return (
-    <UnstyledButton
+    <UnstyledButtonAnchor
       {...props}
-      type={type}
       className={clsx(className, styles["button"])}
       data-variant={variant}
       data-theme={theme}
       data-size={size}
       data-shape={shape}
-      aria-disabled={disabled}
     >
-      {loading ? (
-        <CircularProgress {...{ size, theme, variant }} />
-      ) : (
-        <>
-          {prefix ?? null}
-          {children}
-          {suffix ?? null}
-        </>
-      )}
-    </UnstyledButton>
+      {prefix ?? null}
+      {children}
+      {suffix ?? null}
+    </UnstyledButtonAnchor>
   );
 }

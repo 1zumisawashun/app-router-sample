@@ -1,10 +1,6 @@
 import { SizeType } from "@/functions/types/Common";
-import {
-  IconButton,
-  IconButtonAnchor,
-  IconButtonAnchorProps,
-  IconButtonProps,
-} from "../IconButton";
+import IconButton, { IconButtonProps } from "../IconButton";
+import IconButtonAnchor, { IconButtonAnchorProps } from "../IconButtonAnchor";
 import styles from "./styles.module.scss";
 
 type IconButtonGroupProps = {
@@ -22,10 +18,10 @@ const samples: Item[] = [
 
 const BLOCK_NAME = "icon-button-group";
 
-export const IconButtonGroup: React.FC<IconButtonGroupProps> = ({
+export default function IconButtonGroup({
   items = samples,
   size,
-}) => {
+}: IconButtonGroupProps) {
   return (
     <ul className={styles[`${BLOCK_NAME}-wrapper`]}>
       {items.map((item) => (
@@ -49,4 +45,4 @@ export const IconButtonGroup: React.FC<IconButtonGroupProps> = ({
       ))}
     </ul>
   );
-};
+}

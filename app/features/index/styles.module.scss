@@ -1,4 +1,4 @@
-@import "@/assets/styles/app.scss";
+// @import "@/assets/styles/app.scss";
 
 .index-container {
   display: flex;
@@ -14,15 +14,18 @@
 }
 
 .index-sub-title {
-  composes: text-large -pink -bold;
+  // composes: text-large -pink -bold;
+  color: black;
 }
 
 .index-title {
-  composes: title-medium -bold;
+  // composes: title-medium -bold;
+  color: black;
 }
 
 .index-text {
-  composes: text-medium -grey;
+  // composes: text-medium -grey;
+  color: black;
 }
 
 .index-text-wrapper {
@@ -33,7 +36,7 @@
 }
 
 .index-image-wrapper {
-  composes: box-shadow;
+  // composes: box-shadow;
   overflow: hidden;
   border-radius: 0.5rem;
 }

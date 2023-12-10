@@ -1,4 +1,3 @@
-import Link, { LinkProps } from "next/link";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
 
 export type UnstyledButtonProps = {
@@ -6,26 +5,14 @@ export type UnstyledButtonProps = {
   children: ReactNode;
 } & Omit<ComponentPropsWithoutRef<"button">, "color">;
 
-export type UnstyledButtonAnchorProps = {
-  children: ReactNode;
-  className?: string;
-} & LinkProps;
-
-export const UnstyledButton = ({
+export default function UnstyledButton({
   type = "button",
   children,
   ...props
-}: UnstyledButtonProps) => {
+}: UnstyledButtonProps) {
   return (
     <button {...props} type={type}>
       {children}
     </button>
   );
-};
-
-export const UnstyledButtonAnchor = ({
-  children,
-  ...props
-}: UnstyledButtonAnchorProps) => {
-  return <Link {...props}>{children}</Link>;
-};
+}

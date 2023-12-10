@@ -1,14 +1,14 @@
-import "@/assets/styles/app.scss";
-import { Header } from "@/components/layouts/Header";
-import { AppProvider } from "@/providers";
-import "@unocss/reset/tailwind.css";
-import { Noto_Sans_JP } from "next/font/google";
+// import "@/assets/styles/app.scss";
+// import { Header } from "../../app/components/layouts/Header";
+// import { AppProvider } from "@/providers";
+// import "@unocss/reset/tailwind.css";
+// import { Noto_Sans_JP } from "next/font/google";
 
-const NotoSansJP = Noto_Sans_JP({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  preload: true,
-});
+// const NotoSansJP = Noto_Sans_JP({
+//   weight: ["400", "700"],
+//   subsets: ["latin"],
+//   preload: true,
+// });
 
 // Pages Routerでは、ページのタイトルやmetaタグ情報はnext/headのHeadコンポーネントで設定していました。
 // App Routerでは、metadataオブジェクトをexportすることで設定します。page.jsxもしくはlayout.jsxでexportできます。
@@ -25,13 +25,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className={NotoSansJP.className}>
-        <AppProvider>
-          <Header />
-          <main>
-            <div className="container-sp _mb-2">{children}</div>
-          </main>
-        </AppProvider>
+      <body>
+        {/* <body className={NotoSansJP.className}> */}
+        {/* <AppProvider>*/}
+        {/* <Header /> */}
+        <main>
+          <div className="container-sp _mb-2">{children}</div>
+        </main>
+        {/* </AppProvider> */}
       </body>
     </html>
   );

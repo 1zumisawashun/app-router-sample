@@ -1,11 +1,11 @@
 "use client";
 import {
-  Button,
   FlexWrapper,
   FormWrapper,
   InputText,
   InputTextarea,
 } from "@/components";
+import { Button } from "@/components/buttons";
 import { Settings } from "@/functions/models/Settings";
 import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";

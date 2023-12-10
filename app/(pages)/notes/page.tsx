@@ -1,4 +1,4 @@
-import { UnstyledButtonAnchor } from "@/components/buttons/UnstyledButton";
+import { UnstyledButtonAnchor } from "@/components/buttons";
 import { AddIcon } from "@/components/elements/SvgIcon";
 import { SubHeader } from "@/components/layouts/SubHeader";
 import { NoteList } from "@/features/notes/NoteList";

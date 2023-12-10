@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import LabelButton from "./index";
+import IconButtonAnchor from "./index";
 
-const meta: Meta<typeof LabelButton> = {
-  title: "LabelButton",
-  component: LabelButton,
+const meta: Meta<typeof IconButtonAnchor> = {
+  title: "IconButtonAnchor",
+  component: IconButtonAnchor,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -19,11 +19,8 @@ const meta: Meta<typeof LabelButton> = {
 
 export default meta;
 
-type Story = StoryObj<typeof LabelButton>;
+type Story = StoryObj<typeof IconButtonAnchor>;
 
 export const Primary: Story = {
-  args: {
-    theme: "primary",
-    children: "LabelButton",
-  },
+  args: {},
 };

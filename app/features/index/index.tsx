@@ -1,6 +1,6 @@
-import coverPic from "@/assets/images/image-cover.jpg";
-import { AnchorButton, FlexWrapper } from "@/components";
-import Image from "next/image";
+// import coverPic from "@/assets/images/image-cover.jpg";
+// import { AnchorButton } from "@/components";
+// import Image from "next/image";
 import "server-only";
 import styles from "./styles.module.scss";
 
@@ -26,23 +26,23 @@ export default function Page() {
           </p>
         </div>
 
-        <FlexWrapper position="center">
-          <AnchorButton href="/notes/new" size="large">
-            Add new
-          </AnchorButton>
-          <AnchorButton href="/notes" variant="outlined" size="large">
-            View list
-          </AnchorButton>
-        </FlexWrapper>
+        {/* <FlexWrapper position="center">
+        <AnchorButton href="/notes/new" size="large">
+          Add new
+        </AnchorButton>
+        <AnchorButton href="/notes" variant="outlined" size="large">
+          View list
+        </AnchorButton>
+        </FlexWrapper> */}
       </div>
 
       <div className={styles["index-image-wrapper"]}>
-        <Image
+        {/* <Image
           src={coverPic}
           priority
           alt="Photo by Fakurian Design"
           className={styles["index-image"]}
-        />
+        /> */}
       </div>
     </section>
   );

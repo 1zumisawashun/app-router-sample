@@ -1,7 +1,4 @@
-/* buttons */
-export { AnchorButton, Button } from "./buttons/Button";
-export { TextButton, TextButtonAnchor } from "./buttons/TextButton";
-export { UnstyledButton, UnstyledButtonAnchor } from "./buttons/UnstyledButton";
+
 
 /* elements */
 export { Avatar } from "./elements/Avatar";

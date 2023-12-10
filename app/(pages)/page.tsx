@@ -1,6 +1,7 @@
-import Index from "@/features/index";
+// import Index from "@/features/index";
 import "server-only";
 
 export default function Page() {
-  return <Index />;
+  return <div>test</div>;
+  // return <Index />;
 }

@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { AddIcon, EditIcon } from "../../elements/SvgIcon";
-import Button from "./index";
+import LabelButtonAnchor from "./index";
 
-const meta: Meta<typeof Button> = {
-  title: "Button",
-  component: Button,
+const meta: Meta<typeof LabelButtonAnchor> = {
+  title: "LabelButtonAnchor",
+  component: LabelButtonAnchor,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -20,30 +19,11 @@ const meta: Meta<typeof Button> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof LabelButtonAnchor>;
 
 export const Primary: Story = {
   args: {
-    variant: "contained",
     theme: "primary",
-    children: "Button",
-  },
-};
-
-export const PrimaryWithPrefix: Story = {
-  args: {
-    variant: "contained",
-    theme: "primary",
-    children: "Button",
-    prefix: <AddIcon />,
-  },
-};
-
-export const PrimaryWithSuffix: Story = {
-  args: {
-    variant: "contained",
-    theme: "primary",
-    children: "Button",
-    suffix: <EditIcon />,
+    children: "LabelButtonAnchor",
   },
 };
