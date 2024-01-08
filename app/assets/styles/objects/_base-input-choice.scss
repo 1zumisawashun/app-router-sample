@@ -35,33 +35,29 @@
   color: lightgrey;
 }
 
-// NOTE:「+」を使うことでpropsをinputに集約することができる
-// NOTE:親子関係であれば擬似要素hasを使った方が良いと思うが同じ階層の場合は+の方が良いのか
-.input-choice-input:checked + .input-choice-icon {
-  border: solid 1px #1e3a8a;
-  color: #1e3a8a;
+.input-choice-icon {
+  &:is(.input-choice-input:checked + *) {
+    border: solid 1px #1e3a8a;
+    color: #1e3a8a;
+  }
+  &:is(.input-choice-input[data-error="true"] + *) {
+    border: solid 1px red;
+    color: red;
+  }
+  &:is(.input-choice-input:disabled + *) {
+    opacity: 0.3;
+  }
 }
 
-.input-choice-input[data-error="true"] + .input-choice-icon {
-  border: solid 1px red;
-  color: red;
-}
-
-.input-choice-input:disabled + .input-choice-icon {
-  opacity: 0.3;
-}
-
-// NOTE:childrenが存在すればmarginを当てる
-.input-choice-text:not(:empty) {
-  margin-left: 8px;
-}
-
-// NOTE:これは存在するorしないが確定していないから「~」を指定している?
-.input-choice-input:checked ~ .input-choice-text {
-  color: black;
-}
-
-.input-choice-input:disabled ~ .input-choice-text {
-  color: black;
-  opacity: 0.3;
+.input-choice-text {
+  &:not(:empty) {
+    margin-left: 8px;
+  }
+  &:is(.input-choice-input:checked + *) {
+    color: black;
+  }
+  &:is(.input-choice-input:disabled + *) {
+    color: black;
+    opacity: 0.3;
+  }
 }
